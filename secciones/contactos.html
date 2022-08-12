@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="../imágenes/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/style.css">
     <title>Despensa Ely - Contáctanos</title>
@@ -19,7 +21,7 @@
         <nav class="navBar">
             <ul class="ulNavBar">
                 <li class="liNavBar logo">
-                    <a href="../index.html"><img class="logoNavBar" src="../imágenes/despensaEly.png" alt="Logo Despensa Ely"></a>
+                    <a href="../index.html"><img class="logoNavBar" src="../imágenes/logo_kawaii_emprendimiento_divertido_moderno_gatito__4_-removebg-preview.png" alt="Logo Despensa Ely"></a>
                 </li>
                 <li class="liNavBar">
                     <a href="./productos.html">PRODUCTOS</a>
@@ -43,14 +45,18 @@
         <!--MAIN-->
 
     <main class="mainFormulario">
-        <h1>¿Quiéres contactarnos?</h1>
-        <h2>Puedes hacerlo mediante:</h2>
-        <div class="divUbicacion">
+        <h1 data-aos="fade-up"
+        data-aos-duration="1000">¿Quiéres contactarnos?</h1>
+        <h2 data-aos="fade-up"
+        data-aos-duration="1000">Puedes hacerlo mediante:</h2>
+        <div class="divUbicacion" data-aos="fade-up"
+        data-aos-duration="1000">
             <h3>Nuestro local físico:</h3>
             <p>Estamos ubicados en General Alvear, Mendoza, Argentina.</p>
             <a href="">Presiona aquí para abrir el mapa de tu navegador.</a>
         </div>
-        <div class="divRedes">
+        <div class="divRedes" data-aos="fade-up"
+        data-aos-duration="1000">
             <h3>Por nuestras redes sociales:</h3>
             
             <div class="imagenesRedes">
@@ -64,11 +70,13 @@
            
         </div>
         <div>
-            <h3>O puedes dejarnos un mensaje por medio del siguiente formulario:</h3>
+            <h3 data-aos="fade-up"
+            data-aos-duration="1000">O puedes dejarnos un mensaje por medio del siguiente formulario:</h3>
 
             <!--FORMULARIO-->
 
-            <section class="formulario">
+            <section class="formulario" data-aos="fade-up"
+            data-aos-duration="1000">
                 <article>
                     <form action="#">
                         <label for="nombre">Introduzca su nombre: 
@@ -106,7 +114,8 @@
 
     <!--FOOTER-->
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up"
+    data-aos-duration="1000">
 
         <section class="sectionFooter">
 
@@ -127,5 +136,10 @@
         </section>
 
     </footer>
+
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>

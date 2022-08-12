@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="imágenes/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/style.css">
     <title>Despensa Ely</title>
@@ -14,13 +16,13 @@
 
 <body>
 
-    <!--BARRA DE NAVEGACIÓN--> 
+    <!--BARRA DE NAVEGACIÓN-->  
 
     <header>
         <nav class="navBar">
             <ul class="ulNavBar">
                 <li class="liNavBar logo">
-                    <a href="./index.html"><img class="logoNavBar" src="./imágenes/despensaEly.png" alt="Logo Despensa Ely"></a>
+                    <a href="./index.html"><img class="logoNavBar" src="./imágenes/logo_kawaii_emprendimiento_divertido_moderno_gatito__4_-removebg-preview.png" alt="Logo Despensa Ely"></a>
                 </li>
                 <li class="liNavBar seccion1">
                     <a href="./secciones/productos.html">PRODUCTOS</a>
@@ -46,10 +48,13 @@
 
     <main class="mainIndex">  
         
-        <h1 class="mainTitulo">DESPENSA ELY</h1>
-        <h2 class="mainSlogan">¡Lo que necesites, lo tenemos!</h2>
+        <h1 class="mainTitulo" data-aos="fade-up"
+        data-aos-duration="1000">DESPENSA ELY</h1>
+        <h2 class="mainSlogan" data-aos="fade-up"
+        data-aos-duration="1000">¡Lo que necesites, lo tenemos!</h2>
 
-        <section class="sectionOferta">
+        <section class="sectionOferta" data-aos="fade-up"
+        data-aos-duration="1000">
             <h2 class="divTitulo">Ofertas del día</h2>
             <p class="divParrafo">Estas son las ofertas disponibles al día de hoy...</p>
                 
@@ -69,7 +74,8 @@
             </div>
         </section>
 
-        <section class="sectionInteresar">
+        <section class="sectionInteresar" data-aos="fade-up"
+        data-aos-duration="1000">
             <h2 class="sectionsTitulo">Creemos que te puede interesar...</h2>
             <div>
                 <img src="" alt="Imagen de producto">
@@ -85,7 +91,8 @@
             </div>
         </section>
 
-        <section class="sectionNovedades">
+        <section class="sectionNovedades" data-aos="fade-up"
+        data-aos-duration="1000">
             <h2>¡Novedades!</h2>
             <p>Aquí pondremos los productos novedosos o las noticias que tengan que ver con la empresa.</p>
             <div>
@@ -97,7 +104,8 @@
         <!--FOOTER-->
 
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up"
+    data-aos-duration="1000">
 
         <section class="sectionFooter">
 
@@ -118,5 +126,10 @@
         </section>
 
     </footer>
+
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>

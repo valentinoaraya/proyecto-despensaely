@@ -1,5 +1,23 @@
 /*---------------------------MOBILE FIRST---------------------------*/
 
+            /*ANIMACION*/
+
+/*No se me ocurrió bien para que utilizar la animación*/
+
+@keyframes logo-animado{
+    0%{width: 7rem;
+        height: 6rem;}
+    25%{width: 10rem;
+        height: 9rem;}
+    50%{width: 4rem;
+        height: 3rem;}
+    75%{width: 5rem;
+        height: 4rem;}
+    100%{width: 7rem;
+        height: 6rem;}
+}
+
+
 /*ESTILOS GENERALES*/
 
 *{
@@ -16,17 +34,15 @@ body{
 
 header{
     background-color: #fb8500;
-    padding: 0.5em;
+    padding-bottom: 0.3em;
     margin-bottom: 3em;
-    border-radius: 0 0 1em 1em;
     height: auto;
 }
 
 footer{
-    background-color: #fb8500;
-    padding: 0.5em;
+    background-color: #219ebc;
+    padding-top: 0.5em;
     margin-top: 0.5em;
-    border-radius: 1rem 1rem 0 0;
 }
 
 img{
@@ -52,8 +68,8 @@ li{
 }
 
 .categoriasNav{
-    border-radius: 1rem;
-    margin: 1em;
+    border: 2px;
+    border-top: #fb8500;
 }
 
 .ulNavBar{
@@ -61,13 +77,17 @@ li{
     background-color: #ffb703;
     display: flex;
     flex-direction: column;
-    border-radius: 1em;
     height: auto;
 }
 
 .liNavBar{
     font-size: 1.5em;
     margin-bottom: 1em;
+    transition: all 0.5s;
+}
+
+.liNavBar:hover{
+    transform: scale(1.2);
 }
 
 .logo{
@@ -77,6 +97,11 @@ li{
 .logoNavBar{
     width: 10rem;
     height: 9rem;
+    animation-name: logo-animado;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 3s;
 }
 
 .sectionOferta{
@@ -93,6 +118,11 @@ li{
     border-radius: 1rem;
     padding: 1rem;
     margin: 1.7em;
+    transition: all 0.5s;
+}
+
+.imagenProducto:hover{
+    transform: scale(1.1);
 }
 
 .imagenProducto p{
@@ -113,10 +143,14 @@ li{
 
 .sectionFooter{
     padding: 0.3em;
-    background-color: #ffb703;
-    border-radius: 1em;
+    background-color: #219ebc;
     display: flex;
     flex-direction: column;
+}
+
+.sectionFooter .footerTitulo, .sectionFooter p{
+    text-align: center;
+    font-size: 2rem;
 }
 
 .logoFooter{
@@ -128,6 +162,11 @@ li{
 .imagenFooter{
     width: 5rem;
     height: 5rem;
+    transition:all 0.5s;
+}
+
+.imagenFooter:hover{
+    transform: scale(1.3);
 }
 
 .footerTitulo{
@@ -295,6 +334,11 @@ body{
         margin-bottom: 1rem;
     }
 
+    .logoNavBar{
+        width: 7rem;
+        height: 6rem;
+    }
+
     .logo{
         grid-area: Logo;
     }
@@ -323,7 +367,6 @@ body{
         padding: 0.3em;
         background-color: #ffb703;
         display: grid;
-        border-radius: 1em;
         height: auto;
         grid-template-areas: 
         "Logo Logo Logo Logo Logo"
@@ -339,6 +382,7 @@ body{
         padding: 2em;
         border-radius: 1em;
     }
+
     .productoOferta{
         display: flex;
         justify-content: space-around;
@@ -386,7 +430,7 @@ body{
         font-size: 1rem;
         align-items: center;
         justify-content: space-around;
-        border-radius: 1em;
+        height: 15vh;
     }
 
     .mainIndex{

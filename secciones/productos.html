@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="../imágenes/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/style.css">
     <title>Despensa Ely - Productos</title>
@@ -19,7 +21,7 @@
         <nav class="navBar">
             <ul class="ulNavBar">
                 <li class="liNavBar logo">
-                    <a href="../index.html"><img class="logoNavBar" src="../imágenes/despensaEly.png" alt="Logo Despensa Ely"></a>
+                    <a href="../index.html"><img class="logoNavBar" src="../imágenes/logo_kawaii_emprendimiento_divertido_moderno_gatito__4_-removebg-preview.png" alt="Logo Despensa Ely"></a>
                 </li>
                 <li class="liNavBar">
                     <a href="./productos.html">PRODUCTOS</a>
@@ -41,7 +43,9 @@
 
         <!--BARRA DE CATEGORÍAS-->
 
-        <nav class="navBar">
+        <nav class="navBar" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="800">
             <ul class="ulNavBar categoriasNav">
                 <li class="liNavBar">
                     <a href="">Todos los productos</a>
@@ -70,7 +74,8 @@
 
     <!--MAIN-->
 
-    <main class="mainProductos">
+    <main class="mainProductos" data-aos="fade-up"
+    data-aos-duration="1000">
         <h1>Todos los productos</h1>
         <div>
             <img src="" alt="Producto">
@@ -97,7 +102,8 @@
 
     <!--FOOTER-->
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up"
+    data-aos-duration="1000">
 
         <section class="sectionFooter">
 
@@ -118,5 +124,10 @@
         </section>
 
     </footer>
+
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>
