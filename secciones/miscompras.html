@@ -11,17 +11,15 @@
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
  
     <!-- ANIMACIONES -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
      
     <!-- CSS -->
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/sass.css">
  
     <!-- TÍTULO -->
     <title>Despensa Ely - Historial</title>
@@ -33,7 +31,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-color-naranjita border-bottom border-warning">
             <div class="container-fluid">
-              <a class="navbar-brand fs-1 fw-bold navbarfont ms-5" href="../index.html">D.E.</a>
+              <a class="navbar-brand fw-bold navbarfont ms-5" href="../index.html">D.E.</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -52,39 +50,39 @@
 
     <!--MAIN-->
 
-    <main data-aos="fade-up"
+    <main class="mainMisCompras" data-aos="fade-up"
     data-aos-duration="1000">
         <h1>Tus últimas compras:</h1>
-        <section class="sectionHistorial">
-            <div class="productosHorizontal">
+        <section>
+            <div>
                 <img src="" alt="Imagen de producto">
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
                 <p>Fecha y hora de compra</p>
                 <a href="">Comprobante de pago</a>
             </div>
-            <div class="productosHorizontal">
+            <div>
                 <img src="" alt="Imagen de producto">
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
                 <p>Fecha y hora de compra</p>
                 <a href="">Comprobante de pago</a>
             </div>
-            <div class="productosHorizontal">
+            <div>
                 <img src="" alt="Imagen de producto">
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
                 <p>Fecha y hora de compra</p>
                 <a href="">Comprobante de pago</a>
             </div>
-            <div class="productosHorizontal">
+            <div>
                 <img src="" alt="Imagen de producto">
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
                 <p>Fecha y hora de compra</p>
                 <a href="">Comprobante de pago</a>
             </div>
-            <div class="productosHorizontal">
+            <div>
                 <img src="" alt="Imagen de producto">
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
@@ -96,23 +94,23 @@
 
     <!--FOOTER-->
 
-    <footer class="footer">
+    <footer data-aos="fade-up"
+    data-aos-duration="1000">
 
-        <section class="sectionFooter" data-aos="fade-up"
-        data-aos-duration="1000">
+        <section>
 
-            <h3 class="footerTitulo">¡Seguinos en nuestras redes sociales!</h3>
-            <div class="logoFooter">
+            <h3>¡Seguinos en nuestras redes sociales!</h3>
+            <div>
                 <a href="https://www.facebook.com/profile.php?id=100069620050081">
-                    <img class="imagenFooter" src="../imágenes/facebook-logo-3-1.png" alt="Logo Facebook">
+                    <img src="../imágenes/facebook-logo-3-1.png" alt="Logo Facebook">
                 </a>
         
                 <a href="https://www.instagram.com/despensa.ely/?hl=es-la">
-                    <img class="imagenFooter" src="../imágenes/Instagram-Logo-PNG-Image-1.png" alt="Logo Instagram">
+                    <img src="../imágenes/Instagram-Logo-PNG-Image-1.png" alt="Logo Instagram">
                 </a>
             </div>
             
-            <h3 class="footerTitulo">¿Dónde encontrar nuestro local?</h3>
+            <h3>¿Dónde encontrar nuestro local?</h3>
             <p>Estamos ubicados en la calle Ingeniero Lange 1187 de General Alvear, Mendoza.</p>
 
         </section>
@@ -123,6 +121,8 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
    <!-- ANIMACIONES -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
    <script>
        AOS.init();
    </script>

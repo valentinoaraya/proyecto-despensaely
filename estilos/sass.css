@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  min-height: 100%;
+  min-width: 100%;
+  font-family: "Oswald", sans-serif;
+  background-color: #8ecae6;
+}
+
+img {
+  width: 10em;
+  height: 10em;
+}
+
+.bg-color-naranjita {
+  background-color: #ffb703;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  grid-area: main;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+@media (min-width: 500px) {
+  header {
+    margin-bottom: 1rem;
+  }
+  body {
+    display: grid;
+    grid-template-areas: "header header" "main main" "footer footer";
+  }
+}
+header {
+  margin-bottom: 2rem;
+}
+header nav .navbarfont {
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  color: #219ebc;
+}
+
+main {
+  margin: 1.5rem;
+}
+
+.mainIndex {
+  display: grid;
+  grid-template-areas: "Titulo" "Slogan" "Ofertas" "Interesar" "Novedades";
+}
+.mainIndex h1 {
+  grid-area: Titulo;
+}
+.mainIndex h2 {
+  grid-area: Slogan;
+}
+.mainIndex .sectionOferta {
+  grid-area: Ofertas;
+}
+.mainIndex .sectionInteresar {
+  grid-area: Interesar;
+}
+.mainIndex .sectionNovedades {
+  grid-area: Novedades;
+}
+
+.mainIndex h1 {
+  margin-bottom: 2rem;
+}
+.mainIndex h2 {
+  margin-bottom: 2rem;
+}
+.mainIndex .sectionOferta {
+  display: flex;
+  flex-direction: column;
+  background-color: #219ebc;
+  padding: 2em;
+  border-radius: 1em;
+  margin: 0 1em 2em 1em;
+}
+.mainIndex .sectionOferta .productoOferta div {
+  background-color: #ffb703;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1.7em;
+  transition: all 0.5s;
+}
+.mainIndex .sectionOferta .productoOferta div:hover {
+  transform: scale(1.1);
+}
+.mainIndex .sectionOferta .productoOferta div img {
+  margin: 0.5em;
+}
+.mainIndex .sectionOferta .productoOferta div p {
+  text-align: start;
+}
+.mainIndex .sectionInteresar {
+  margin: 3em 0 3em 0;
+}
+.mainIndex .sectionNovedades {
+  margin-bottom: 3em;
+}
+
+.mainProductos {
+  display: grid;
+  grid-template-areas: "Titulo" "Productos";
+}
+.mainProductos h1 {
+  grid-area: Titulo;
+}
+.mainProductos section {
+  grid-area: Productos;
+}
+
+.mainMisCompras {
+  display: grid;
+  grid-template-areas: "Titulo" "MisCompras";
+}
+.mainMisCompras h1 {
+  grid-area: Titulo;
+}
+.mainMisCompras section {
+  grid-area: MisCompras;
+}
+
+.mainMisCompras section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.mainMisCompras section div {
+  background-color: #219ebc;
+  text-align: start;
+  margin: 2em 1em 2em 1em;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+
+.mainHistorial {
+  display: grid;
+  grid-template-areas: "Titulo" "Historial";
+}
+.mainHistorial h1 {
+  grid-area: Titulo;
+}
+.mainHistorial section {
+  grid-area: Historial;
+}
+
+.mainHistorial section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.mainHistorial section div {
+  background-color: #219ebc;
+  text-align: start;
+  margin: 2em 1em 2em 1em;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+
+.mainSobreNosotros {
+  display: grid;
+  grid-template-areas: "Titulo" "Historia" "Aside";
+  grid-template-columns: 1fr;
+}
+.mainSobreNosotros h1 {
+  grid-area: Titulo;
+}
+.mainSobreNosotros p {
+  grid-area: Historia;
+}
+.mainSobreNosotros aside {
+  grid-area: Aside;
+  display: none;
+}
+
+.mainSobreNosotros {
+  margin: 0.5em 0.5em 2em 0.5em;
+}
+
+.mainContactos {
+  display: grid;
+  grid-template-areas: "Titulo" "Subtitulo" "Ubicacion" "Redes" "Formulario";
+}
+.mainContactos h1 {
+  grid-area: Titulo;
+}
+.mainContactos h2 {
+  grid-area: Subtitulo;
+}
+.mainContactos .divUbicacion {
+  grid-area: Ubicacion;
+}
+.mainContactos .divRedes {
+  grid-area: Redes;
+}
+.mainContactos .form {
+  grid-area: Formulario;
+}
+
+.mainContactos {
+  margin: 0 1em 0 1em;
+}
+.mainContactos h1, .mainContactos h2 {
+  margin-bottom: 1em;
+}
+.mainContactos .divUbicacion {
+  margin: 0.5em 0 2em 0;
+}
+.mainContactos .divRedes {
+  margin: 0.5em 0 2em 0;
+}
+.mainContactos .divRedes div {
+  display: flex;
+  justify-content: center;
+}
+.mainContactos .divRedes div a img {
+  font-size: 0.7rem;
+  margin: 1.5em;
+  justify-content: space-around;
+}
+.mainContactos .divRedes div a img:hover {
+  transform: scale(1.3);
+}
+.mainContactos .form section {
+  background-color: #219ebc;
+  margin: 1em 2em 2em 2em;
+  padding: 2em;
+  border-radius: 1em;
+}
+.mainContactos .form section article {
+  text-align: start;
+}
+.mainContactos .form section article form label {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 500px) {
+  .mainIndex {
+    display: grid;
+    grid-template-areas: "Titulo Titulo" "Slogan Slogan" "Ofertas Ofertas" "Interesar Interesar" "Novedades Novedades";
+  }
+  .mainIndex .sectionOferta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    background-color: #219ebc;
+    padding: 2em;
+    border-radius: 1em;
+  }
+  .mainIndex .sectionOferta .productoOferta {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainIndex .sectionOferta .productoOferta div {
+    justify-content: center;
+    width: 12.5rem;
+    padding: 1.5rem;
+  }
+  .mainProductos {
+    display: grid;
+    grid-template-areas: "Titulo Titulo" "Productos Productos";
+  }
+  .mainMisCompras {
+    display: grid;
+    grid-template-areas: "Titulo Titulo" "MisCompras MisCompras";
+  }
+  .mainHistorial {
+    display: grid;
+    grid-template-areas: "Titulo Titulo" "Historial Historial";
+  }
+  .mainSobreNosotros {
+    display: grid;
+    grid-template-areas: "Aside Titulo Titulo" "Aside Historia Historia";
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+  .mainSobreNosotros aside {
+    grid-area: Aside;
+    display: block;
+  }
+  .mainContactos {
+    display: grid;
+    grid-template-areas: "Titulo Titulo" "Subtitulo Subtitulo" "Ubicacion Ubicacion" "Redes Redes" "Formulario Formulario";
+  }
+  .mainContactos .divUbicacion {
+    text-align: start;
+  }
+  .mainContactos .divRedes h3 {
+    text-align: start;
+  }
+  .mainContactos .divRedes div a img {
+    transition: all 0.5s;
+  }
+  .mainContactos .form h3 {
+    text-align: start;
+  }
+  .mainContactos .form section article form {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainContactos .form section article form input {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    text-align: start;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+  }
+  .mainIndex {
+    display: grid;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Slogan Slogan Slogan Slogan" "Ofertas Ofertas Ofertas Ofertas" "Interesar Interesar Interesar Interesar" "Novedades Novedades Novedades Novedades";
+  }
+  .mainIndex h1 {
+    text-align: center;
+  }
+  .mainIndex h2 {
+    text-align: center;
+  }
+  .mainIndex .sectionOferta h2 {
+    text-align: start;
+  }
+  .mainIndex .sectionOferta .productoOferta {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainIndex .sectionOferta .productoOferta div {
+    justify-content: center;
+    width: 12.5rem;
+    padding: 1.5rem;
+  }
+  .mainProductos {
+    display: grid;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Productos Productos Productos Productos";
+  }
+  .mainMisCompras {
+    display: grid;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "MisCompras MisCompras MisCompras MisCompras";
+  }
+  .mainHistorial {
+    display: grid;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Historial Historial Historial Historial";
+  }
+  .mainSobreNosotros {
+    display: grid;
+    grid-template-areas: "Aside Titulo Titulo Titulo" "Aside Historia Historia Historia";
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+  }
+  .mainSobreNosotros aside {
+    grid-area: Aside;
+    display: block;
+  }
+  .mainContactos {
+    display: grid;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Subtitulo Subtitulo Subtitulo Subtitulo" "Ubicacion Ubicacion Ubicacion Ubicacion" "Redes Redes Redes Redes" "Formulario Formulario Formulario Formulario";
+  }
+  .mainContactos h1 {
+    text-align: center;
+  }
+  .mainContactos .divUbicacion {
+    text-align: start;
+  }
+  .mainContactos .divRedes h3 {
+    text-align: start;
+  }
+  .mainContactos .divRedes div a img {
+    transition: all 0.5s;
+  }
+  .mainContactos .form h3 {
+    text-align: start;
+  }
+  .mainContactos .form section article form {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainContactos .form section article form input {
+    margin-bottom: 1rem;
+  }
+}
+footer {
+  background-color: #219ebc;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+}
+footer section {
+  padding: 0.3em;
+  background-color: #219ebc;
+  display: flex;
+  flex-direction: column;
+}
+footer section h3, footer section p {
+  margin: 1em 0 1em 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+footer section div {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0 1em 0;
+}
+footer section div a img {
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.5s;
+}
+footer section div a img:hover {
+  transform: scale(1.3);
+}/*# sourceMappingURL=sass.css.map */

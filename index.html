@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <!-- FAVICON -->
-        <link rel="shortcut icon" href="imágenes/favicon.ico">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imágenes/favicon.ico">
     
-        <!-- FUENTES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-        <!-- ANIMACIONES -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
-        <!-- BOOTSTRAP -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./estilos/sass.css">
     
-        <!-- CSS -->
-        <link rel="stylesheet" href="./estilos/style.css">
-    
-        <!-- TÍTULO -->
-        <title>Despensa Ely</title>
-    </head>
+    <!-- TÍTULO -->
+    <title>Despensa Ely</title>
+</head>
 
 <body>
 
@@ -34,7 +32,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-color-naranjita border-bottom border-warning">
             <div class="container-fluid">
-              <a class="navbar-brand fs-1 fw-bold navbarfont ms-5" href="./index.html">D.E.</a>
+              <a class="navbar-brand fw-bold navbarfont ms-5" href="./index.html">D.E.</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -56,35 +54,41 @@
 
     <main class="mainIndex">  
         
-        <h1 class="mainTitulo" data-aos="fade-up"
+        <h1 data-aos="fade-up"
         data-aos-duration="1000">DESPENSA ELY</h1>
-        <h2 class="mainSlogan" data-aos="fade-up"
+        <h2 data-aos="fade-up"
         data-aos-duration="1000">¡Lo que necesites, lo tenemos!</h2>
 
         <section class="sectionOferta" data-aos="fade-up"
         data-aos-duration="1000">
-            <h2 class="divTitulo">Ofertas del día</h2>
-            <p class="divParrafo">Estas son las ofertas disponibles al día de hoy...</p>
+            <h2>Ofertas del día</h2>
+            <p>Estas son las ofertas disponibles al día de hoy...</p>
                 
             <div class="productoOferta">
-                <div class="imagenProducto">
-                        <img class="producto" src="./imágenes/580b57fbd9996e24bc43c0d0.png" alt="Chocolate">
-                        <p>Chocolate Milka</p>
-                        <p>$200</p>
-                        <p>20% OFF</p>
+                <div>
+                    <img src="./imágenes/580b57fbd9996e24bc43c0d0.png" alt="Chocolate">
+                    <p>Chocolate Milka</p>
+                    <p>$200</p>
+                    <p>20% OFF</p>
                 </div>
-                <div class="imagenProducto">
-                    <img class="producto" src="./imágenes/580b57fbd9996e24bc43c0eb.png" alt="Gaseosa">
+                <div>
+                    <img src="./imágenes/580b57fbd9996e24bc43c0d0.png" alt="Chocolate">
+                    <p>Chocolate Milka</p>
+                    <p>$200</p>
+                    <p>20% OFF</p>
+                </div>
+                <div>
+                    <img src="./imágenes/580b57fbd9996e24bc43c0eb.png" alt="Gaseosa">
                     <p>Lata CocaCola</p>
                     <p>$150</p>
-                    <p>15% OFF</p>
+                    <p>15% OFF</p> 
                 </div>
             </div>
         </section>
 
         <section class="sectionInteresar" data-aos="fade-up"
         data-aos-duration="1000">
-            <h2 class="sectionsTitulo">Creemos que te puede interesar...</h2>
+            <h2>Creemos que te puede interesar...</h2>
             <div>
                 <img src="" alt="Imagen de producto">
             </div>
@@ -109,26 +113,26 @@
         </section>
     </main>
 
-        <!--FOOTER-->
+    <!--FOOTER-->
 
 
-    <footer class="footer" data-aos="fade-up"
+    <footer data-aos="fade-up"
     data-aos-duration="1000">
 
-        <section class="sectionFooter">
+        <section>
 
-            <h3 class="footerTitulo">¡Seguinos en nuestras redes sociales!</h3>
-            <div class="logoFooter">
+            <h3>¡Seguinos en nuestras redes sociales!</h3>
+            <div>
                 <a href="https://www.facebook.com/profile.php?id=100069620050081">
-                    <img class="imagenFooter" src="./imágenes/facebook-logo-3-1.png" alt="Logo Facebook">
+                    <img src="./imágenes/facebook-logo-3-1.png" alt="Logo Facebook">
                 </a>
         
                 <a href="https://www.instagram.com/despensa.ely/?hl=es-la">
-                    <img class="imagenFooter" src="./imágenes/Instagram-Logo-PNG-Image-1.png" alt="Logo Instagram">
+                    <img src="./imágenes/Instagram-Logo-PNG-Image-1.png" alt="Logo Instagram">
                 </a>
             </div>
             
-            <h3 class="footerTitulo">¿Dónde encontrar nuestro local?</h3>
+            <h3>¿Dónde encontrar nuestro local?</h3>
             <p>Estamos ubicados en la calle Ingeniero Lange 1187 de General Alvear, Mendoza.</p>
 
         </section>
@@ -139,6 +143,8 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
    <!-- ANIMACIONES -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
    <script>
        AOS.init();
    </script>

@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    min-height: 100%;
+    min-width: 100%;
+    font-family: "Oswald", sans-serif;
+    background-color: $bgceleste;
+}
+
+img{
+    width: 10em;
+    height: 10em;
+}
+
+.bg-color-naranjita{
+    background-color: $bgnaranjaclaro;
+}
+
+
+
+
+// LAYOUTS GENERALES ---- MOBILE FIRST
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+main{
+    grid-area: main;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+
+
+
+
+
+// LAYOUTS GENERALES ------ TABLET
+
+@media (min-width: 500px){
+
+    header{
+        margin-bottom: 1rem;
+    }
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    }
+}
+
+
+

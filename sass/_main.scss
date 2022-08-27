@@ -1,0 +1,805 @@
+main{
+    margin: 1.5rem;
+}
+
+//--------------------------------FIRST MOBILE--------------------------------//
+
+//--------------MAIN INDEX--------------
+
+// LAYOUT
+
+.mainIndex{
+    h1{
+        grid-area: Titulo;
+    }
+
+    h2{
+        grid-area: Slogan;
+    }
+
+    .sectionOferta{
+        grid-area: Ofertas;
+    }
+
+    .sectionInteresar{
+        grid-area: Interesar;
+    }
+
+    .sectionNovedades{
+        grid-area: Novedades;
+    }
+
+    display: grid;
+    grid-template-areas: 
+    "Titulo"
+    "Slogan"
+    "Ofertas"
+    "Interesar"
+    "Novedades";
+}
+
+// ESTILOS 
+
+.mainIndex{
+    h1{
+        margin-bottom: 2rem;
+    }
+
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    .sectionOferta{
+        display: flex;
+        flex-direction: column;
+        background-color: $bgazul;
+        padding: 2em;
+        border-radius: 1em;
+        margin: 0 1em 2em 1em;
+    
+        .productoOferta{
+    
+            div{
+                background-color: $bgnaranjaclaro;
+                border-radius: 1rem;
+                padding: 1rem;
+                margin: 1.7em;
+                transition: all 0.5s;
+    
+                &:hover{
+                    transform: scale(1.1);
+                }
+    
+                img{
+                    margin: 0.5em;
+                }
+    
+                p{
+                    text-align: start;
+                }
+            }
+        }
+    }
+
+    .sectionInteresar{
+        margin: 3em 0 3em 0;
+    }
+
+    .sectionNovedades{
+        margin-bottom: 3em;
+    }
+}
+
+
+
+//--------------MAIN PRODUCTOS--------------
+
+//LAYOUT
+
+.mainProductos{
+    h1{
+        grid-area: Titulo;
+    }
+
+    section{
+        grid-area: Productos;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Productos";
+}
+
+// ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------MAIN MIS COMPRAS--------------
+
+// LAYOUT
+
+.mainMisCompras{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    section{
+        grid-area: MisCompras;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "MisCompras";
+}
+
+
+// ESTILOS
+
+.mainMisCompras{
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            background-color: $bgazul;
+            text-align: start;
+            margin: 2em 1em 2em 1em;
+            padding: 0.6rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+
+
+
+//--------------MAIN HISTORIAL--------------
+
+// LAYOUT
+
+.mainHistorial{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    section{
+        grid-area: Historial;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Historial";
+}
+
+
+// ESTILOS
+
+.mainHistorial{
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            background-color: $bgazul;
+            text-align: start;
+            margin: 2em 1em 2em 1em;
+            padding: 0.6rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+
+//--------------MAIN SOBRE NOSOTROS--------------
+
+//LAYOUT
+
+.mainSobreNosotros{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    p{
+        grid-area: Historia;
+    }
+
+    aside{
+        grid-area: Aside;
+        display: none;
+    }
+
+    display: grid;
+    grid-template-areas: 
+    "Titulo"
+    "Historia"
+    "Aside";
+    grid-template-columns: 1fr;
+}
+
+
+// ESTILOS
+
+.mainSobreNosotros{
+    margin: 0.5em 0.5em 2em 0.5em;
+}
+
+
+
+//--------------MAIN CONTACTOS--------------
+
+// LAYOUT
+
+.mainContactos{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    h2{
+        grid-area: Subtitulo;
+    }
+
+    .divUbicacion{
+        grid-area: Ubicacion;
+    }
+
+    .divRedes{
+        grid-area: Redes;
+    }
+
+    .form{
+        grid-area: Formulario;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Subtitulo"
+        "Ubicacion"
+        "Redes"
+        "Formulario";
+}
+
+
+// ESTILOS
+
+.mainContactos{
+    margin: 0 1em 0 1em;
+
+    h1,h2{
+        margin-bottom: 1em;
+    }
+
+    .divUbicacion{
+        margin: 0.5em 0 2em 0;
+    }
+
+    .divRedes{
+        margin: 0.5em 0 2em 0;
+
+        div{
+            display: flex;
+            justify-content: center;
+
+            a{
+                img{
+                    font-size: 0.7rem;
+                    margin: 1.5em;
+                    justify-content: space-around;
+
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+
+    .form{
+
+        section{
+            background-color: $bgazul;
+            margin: 1em 2em 2em 2em;
+            padding: 2em;
+            border-radius: 1em;
+
+            article{
+                text-align: start;
+                
+                form{
+                    label{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------TABLET STYLES--------------------------------//
+
+@media (min-width: 500px){
+
+    //--------------MAIN INDEX--------------
+
+    // LAYOUT
+
+    .mainIndex{
+        display: grid;
+        grid-template-areas: 
+        "Titulo Titulo"
+        "Slogan Slogan"
+        "Ofertas Ofertas"
+        "Interesar Interesar"
+        "Novedades Novedades";
+    }
+
+
+    // ESTILOS
+
+    .mainIndex{
+
+        .sectionOferta{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+            background-color: $bgazul;
+            padding: 2em;
+            border-radius: 1em;
+
+            .productoOferta{
+                display: flex;
+                justify-content: space-around;
+
+                div{
+                    justify-content: center;
+                    width: 12.5rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+
+    //--------------MAIN PRODUCTOS--------------
+
+    //LAYOUT
+
+    .mainProductos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Productos Productos";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN MIS COMPRAS--------------
+
+    // LAYOUT
+
+    .mainMisCompras{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "MisCompras MisCompras";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN HISTORIAL--------------
+
+    // LAYOUT
+
+    .mainHistorial{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Historial Historial";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN SOBRE NOSOTROS--------------
+
+    //LAYOUT
+
+    .mainSobreNosotros{
+        aside{
+            grid-area: Aside;
+            display: block;
+        }
+
+        display: grid;
+        grid-template-areas: 
+        "Aside Titulo Titulo"
+        "Aside Historia Historia";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN CONTACTOS--------------
+
+    // LAYOUT
+
+    .mainContactos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Subtitulo Subtitulo"
+            "Ubicacion Ubicacion"
+            "Redes Redes"
+            "Formulario Formulario";
+    }
+
+    // ESTILOS
+
+    .mainContactos{
+
+        .divUbicacion{
+            text-align: start;
+        }
+
+        .divRedes{
+
+            h3{
+                text-align: start;
+            }
+
+            div{
+                a{
+                    img{
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .form{
+            
+            h3{
+                text-align: start;
+            }
+
+            section{
+
+                article{
+
+                    form{
+                        display: flex;
+                        flex-direction: column;
+
+                        input{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------DESKTOP STYLES--------------------------------//
+
+
+@media (min-width: 1024px){
+
+    body{
+        text-align: start;
+        grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    }
+
+    //--------------MAIN INDEX--------------
+
+    // LAYOUT
+
+    .mainIndex{
+        display: grid;
+        grid-template-areas: 
+        "Titulo Titulo Titulo Titulo"
+        "Slogan Slogan Slogan Slogan"
+        "Ofertas Ofertas Ofertas Ofertas"
+        "Interesar Interesar Interesar Interesar"
+        "Novedades Novedades Novedades Novedades";
+    }
+
+
+    // ESTILOS
+
+    .mainIndex{
+
+        h1{
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        .sectionOferta{
+           
+            h2{
+                text-align: start;
+            }
+
+            .productoOferta{
+                display: flex;
+                justify-content: space-around;
+
+                div{
+                    justify-content: center;
+                    width: 12.5rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+
+    //--------------MAIN PRODUCTOS--------------
+
+    //LAYOUT
+
+    .mainProductos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Productos Productos Productos Productos";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN MIS COMPRAS--------------
+
+    // LAYOUT
+
+    .mainMisCompras{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "MisCompras MisCompras MisCompras MisCompras";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN HISTORIAL--------------
+
+    // LAYOUT
+
+    .mainHistorial{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Historial Historial Historial Historial";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN SOBRE NOSOTROS--------------
+
+    //LAYOUT
+
+    .mainSobreNosotros{
+        aside{
+            grid-area: Aside;
+            display: block;
+        }
+
+        display: grid;
+        grid-template-areas: 
+        "Aside Titulo Titulo Titulo"
+        "Aside Historia Historia Historia";
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN CONTACTOS--------------
+
+    // LAYOUT
+
+    .mainContactos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Subtitulo Subtitulo Subtitulo Subtitulo"
+            "Ubicacion Ubicacion Ubicacion Ubicacion"
+            "Redes Redes Redes Redes"
+            "Formulario Formulario Formulario Formulario";
+    }
+
+    // ESTILOS
+
+    .mainContactos{
+
+        h1{
+            text-align: center;
+        }
+
+        .divUbicacion{
+            text-align: start;
+        }
+
+        .divRedes{
+
+            h3{
+                text-align: start;
+            }
+
+            div{
+                a{
+                    img{
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .form{
+            
+            h3{
+                text-align: start;
+            }
+
+            section{
+
+                article{
+
+                    form{
+                        display: flex;
+                        flex-direction: column;
+
+                        input{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
