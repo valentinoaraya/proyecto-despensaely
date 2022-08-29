@@ -21,6 +21,62 @@ img{
 }
 
 
+// NAVBAR - GENERAL
+
+header{
+    margin-bottom: 2rem;
+
+    nav{
+
+        .navbarfont{
+            font-size: 3rem;
+            font-family: 'Bebas Neue', cursive;
+            color: $bgazul;
+        }
+    }
+}
+
+
+// FOOTER - GENERAL
+
+footer{
+    background-color: $bgazul;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+
+    section{
+        padding: 0.3em;
+        background-color: $bgazul;
+        display: flex;
+        flex-direction: column;
+
+        h3,p{
+            margin: 1em 0 1em 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        div{
+            display: flex;
+            justify-content: space-around;
+            margin: 1em 0 1em 0;
+
+            a{
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                    transition:all 0.5s;
+
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }                
+            }
+        }
+    }
+}
+
+
 
 
 // LAYOUTS GENERALES ---- MOBILE FIRST
@@ -68,4 +124,20 @@ body{
 }
 
 
+
+
+
+
+// LAYOUTS GENERALES ------ DESKTOP
+
+@media (min-width: 1024px){
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    }
+}
 
