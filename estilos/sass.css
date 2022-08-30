@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.taling-bgcolor, .mainHistorial section div, .mainMisCompras section div {
+  text-align: start;
+  background-color: #219ebc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,8 +59,8 @@ footer section div {
   margin: 1em 0 1em 0;
 }
 footer section div a img {
-  width: 5rem;
   height: 5rem;
+  width: 5rem;
   transition: all 0.5s;
 }
 footer section div a img:hover {
@@ -183,8 +188,6 @@ main {
   justify-content: flex-start;
 }
 .mainMisCompras section div {
-  background-color: #219ebc;
-  text-align: start;
   margin: 2em 1em 2em 1em;
   padding: 0.6rem;
   border-radius: 1rem;
@@ -207,8 +210,6 @@ main {
   justify-content: flex-start;
 }
 .mainHistorial section div {
-  background-color: #219ebc;
-  text-align: start;
   margin: 2em 1em 2em 1em;
   padding: 0.6rem;
   border-radius: 1rem;

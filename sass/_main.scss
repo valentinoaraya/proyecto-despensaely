@@ -161,8 +161,7 @@ main{
         justify-content: flex-start;
 
         div{
-            background-color: $bgazul;
-            text-align: start;
+            @extend .taling-bgcolor;
             margin: 2em 1em 2em 1em;
             padding: 0.6rem;
             border-radius: 1rem;
@@ -204,8 +203,7 @@ main{
         justify-content: flex-start;
 
         div{
-            background-color: $bgazul;
-            text-align: start;
+            @extend .taling-bgcolor;
             margin: 2em 1em 2em 1em;
             padding: 0.6rem;
             border-radius: 1rem;

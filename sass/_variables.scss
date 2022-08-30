@@ -1,4 +1,21 @@
+// Variables
+
 $bgazul:#219ebc;
 $bgceleste:#8ecae6;
 $bgnaranja:#fb8500;
 $bgnaranjaclaro:#ffb703;
+
+// Extend
+
+.taling-bgcolor{
+    text-align: start;
+    background-color: $bgazul;
+}
+
+
+// Mixing
+
+@mixin sizes ($width, $height) {
+    height: $height;
+    width: $width;
+}
