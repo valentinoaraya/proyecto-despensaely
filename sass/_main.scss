@@ -43,6 +43,7 @@ main{
 .mainIndex{
     h1{
         margin-bottom: 2rem;
+        font-weight: bold;
     }
 
     h2{
@@ -71,10 +72,11 @@ main{
                 }
     
                 img{
-                    margin: 0.5em;
+                    margin: auto;
                 }
     
                 p{
+                    margin-top: 0.5em;
                     text-align: start;
                 }
             }
@@ -83,10 +85,27 @@ main{
 
     .sectionInteresar{
         margin: 3em 0 3em 0;
-    }
+        
+        div{
+            background-color: $bgnaranjaclaro;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1.7em;
+            transition: all 0.5s;
 
-    .sectionNovedades{
-        margin-bottom: 3em;
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            img{
+                margin: auto;
+            }
+
+            p{
+                margin-top: 0.5em;
+                text-align: start;
+            }
+        }
     }
 }
 
@@ -111,9 +130,36 @@ main{
         "Productos";
 }
 
-// ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+// ESTILOS
 
+.mainProductos{
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-family: Oswald;
 
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @extend .taling-bgcolor;
+            margin: 2em 1em 2em 1em;
+            padding: 0.6rem;
+            border-radius: 1rem;
+            transition:all 0.5s;
+
+            img{
+                width: 10em;
+                height: 10em;
+            }
+
+            p{
+                align-self: start;
+            }
+        }
+    }
+}
 
 
 
@@ -222,7 +268,7 @@ main{
         grid-area: Titulo;
     }
 
-    p{
+    div{
         grid-area: Historia;
     }
 
@@ -579,6 +625,10 @@ main{
 
 @media (min-width: 1024px){
 
+    body{
+        text-align: start;
+    }
+
     //--------------MAIN INDEX--------------
 
     // LAYOUT
@@ -598,13 +648,7 @@ main{
 
     .mainIndex{
 
-        h1{
-            text-align: center;
-        }
-
-        h2{
-            text-align: center;
-        }
+        
 
         .sectionOferta{
            

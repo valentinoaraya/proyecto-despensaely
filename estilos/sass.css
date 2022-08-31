@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-.taling-bgcolor, .mainHistorial section div, .mainMisCompras section div {
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.taling-bgcolor, .mainHistorial section div, .mainMisCompras section div, .mainProductos section div {
   text-align: start;
   background-color: #219ebc;
 }
@@ -32,8 +34,9 @@ header {
   margin-bottom: 2rem;
 }
 header nav .navbarfont {
-  font-size: 3rem;
-  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
   color: #219ebc;
 }
 
@@ -125,6 +128,7 @@ main {
 
 .mainIndex h1 {
   margin-bottom: 2rem;
+  font-weight: bold;
 }
 .mainIndex h2 {
   margin-bottom: 2rem;
@@ -148,16 +152,31 @@ main {
   transform: scale(1.1);
 }
 .mainIndex .sectionOferta .productoOferta div img {
-  margin: 0.5em;
+  margin: auto;
 }
 .mainIndex .sectionOferta .productoOferta div p {
+  margin-top: 0.5em;
   text-align: start;
 }
 .mainIndex .sectionInteresar {
   margin: 3em 0 3em 0;
 }
-.mainIndex .sectionNovedades {
-  margin-bottom: 3em;
+.mainIndex .sectionInteresar div {
+  background-color: #ffb703;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1.7em;
+  transition: all 0.5s;
+}
+.mainIndex .sectionInteresar div:hover {
+  transform: scale(1.1);
+}
+.mainIndex .sectionInteresar div img {
+  margin: auto;
+}
+.mainIndex .sectionInteresar div p {
+  margin-top: 0.5em;
+  text-align: start;
 }
 
 .mainProductos {
@@ -169,6 +188,29 @@ main {
 }
 .mainProductos section {
   grid-area: Productos;
+}
+
+.mainProductos section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Oswald;
+}
+.mainProductos section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 1em 2em 1em;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+.mainProductos section div img {
+  width: 10em;
+  height: 10em;
+}
+.mainProductos section div p {
+  align-self: start;
 }
 
 .mainMisCompras {
@@ -223,7 +265,7 @@ main {
 .mainSobreNosotros h1 {
   grid-area: Titulo;
 }
-.mainSobreNosotros p {
+.mainSobreNosotros div {
   grid-area: Historia;
 }
 .mainSobreNosotros aside {
@@ -360,15 +402,12 @@ main {
   }
 }
 @media (min-width: 1024px) {
+  body {
+    text-align: start;
+  }
   .mainIndex {
     display: grid;
     grid-template-areas: "Titulo Titulo Titulo Titulo" "Slogan Slogan Slogan Slogan" "Ofertas Ofertas Ofertas Ofertas" "Interesar Interesar Interesar Interesar" "Novedades Novedades Novedades Novedades";
-  }
-  .mainIndex h1 {
-    text-align: center;
-  }
-  .mainIndex h2 {
-    text-align: center;
   }
   .mainIndex .sectionOferta h2 {
     text-align: start;
