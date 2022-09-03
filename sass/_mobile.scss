@@ -1,0 +1,549 @@
+//--------------------------------FIRST MOBILE--------------------------------//
+
+//--------------MAIN INDEX--------------
+
+// LAYOUT
+
+.mainIndex{
+    h1{
+        grid-area: Slogan;
+    }
+
+    .sectionOferta{
+        grid-area: Ofertas;
+    }
+
+    .sectionInteresar{
+        grid-area: Interesar;
+    }
+
+    .sectionNovedades{
+        grid-area: Novedades;
+    }
+
+    display: grid;
+    grid-template-areas: 
+    "Slogan"
+    "Ofertas"
+    "Interesar"
+    "Novedades";
+}
+
+// ESTILOS 
+
+.mainIndex{
+    h1{
+        font-size: 3.5rem;
+        color: $colorblanco;
+        margin: 0 3rem 5rem 0;
+        font-weight: bold;
+        text-align: start;
+    }
+
+    h2{
+        color: $colorblanco
+    }
+
+    p{
+        border-top: 1px solid $colorvioleta;
+    }
+
+    .sectionOferta{
+        display: flex;
+        flex-direction: column;
+        background-color: $colorvioleta;
+        padding: 1em;
+        margin-bottom: 2em;
+
+        h2, p{
+            color: $colorblanco
+        }
+    
+        .productoOferta{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media(max-width:455px){
+                flex-direction: column;
+            }
+
+            div{
+                width: auto;
+                background-color: $colorblanco;
+                padding: 1rem;
+                margin-bottom: 1.7em;
+                transition: all 0.5s;
+    
+                &:hover{
+                    transform: scale(1.1);
+                }
+    
+                img{
+                    margin: auto;
+                }
+    
+                p{
+                    margin-top: 0.5em;
+                    color: $colornegro;
+                    text-align: start;
+                }
+            }
+        }
+    }
+
+    .sectionInteresar{
+        margin-bottom: 3em;
+    
+        h2{
+            text-align: start;
+        }
+    
+        div{
+            background-color: $colorblanco;
+            padding: 1rem;
+            margin: 1.7em;
+            transition: all 0.5s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            img{
+                margin: auto;
+            }
+
+            p{
+                margin-top: 0.5em;
+                text-align: start;
+            }
+        }
+    }
+}
+
+
+
+//--------------MAIN PRODUCTOS--------------
+
+//LAYOUT
+
+.mainProductos{
+    h1{
+        grid-area: Titulo;
+    }
+
+    h2{
+        grid-area: Subtitulo;
+    }
+
+    section{
+        grid-area: Productos;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Subtitulo"
+        "Productos";
+}
+
+// ESTILOS
+
+.mainProductos{
+
+    h1{
+        font-size: 3.5rem;
+        color: $colorblanco;
+        margin-bottom: 5rem;
+        font-weight: bold;
+        text-align: start;
+    }
+
+    h2{
+        text-align: start;
+        font-family: 'Bebas Neue', cursive;
+        color: $colorvioleta;
+        
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $colorvioleta;
+        }
+    }
+
+    .sectionproductos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        div{
+            width: 40vw;
+            background-color: $colorblanco;
+            align-items: stretch;
+            padding: 1rem;
+            margin-bottom: 1.7em;
+            transition: all 0.5s;
+    
+            &:hover{
+                transform: scale(1.1);
+            }
+    
+            img{
+                height: 25vh;
+                margin: auto;
+            }
+    
+            p{
+                margin-top: 0.5em;
+                color: $colornegro;
+                text-align: start;
+
+                &::after{
+                    display: none;
+                }
+            }
+        }    
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $colorvioleta;
+            @extend .taling-bgcolor;
+            margin: 2em 0 0.5rem 0;
+            padding: 0.2rem;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 50vh;
+                position: relative;
+                transition: transform 1s;
+                display: block;
+            }
+
+            .parrafoshover{
+                position: absolute;
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3rem;
+                background-color: rgba(51, 49, 46, 0.7);
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $colorblanco;
+                transition: opacity 0.5s ease-in-out;
+                opacity: 0;
+            }
+
+            &:hover .parrafoshover{
+                opacity: 1;
+            }
+        }
+
+        .parrafosecciones{
+            color: $colorvioleta;
+            border-top: none;
+            margin-bottom: 2.5rem;
+            text-align: start;
+            font-size: 1.3rem;
+            font-weight: 500;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2.3rem;
+                left: 0;
+                background-color: $colorvioleta;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------MAIN MIS COMPRAS--------------
+
+// LAYOUT
+
+.mainMisCompras{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    section{
+        grid-area: MisCompras;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "MisCompras";
+}
+
+
+// ESTILOS
+
+.mainMisCompras{
+
+    h1{
+        font-size: 3.5rem;
+        color: $colorblanco;
+        margin-bottom: 5rem;
+        font-weight: bold;
+        text-align: start;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            @extend .taling-bgcolor;
+            margin: 2em 1em 2em 1em;
+            padding: 0.6rem;
+
+            img{
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+//--------------MAIN HISTORIAL--------------
+
+// LAYOUT
+
+.mainHistorial{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    section{
+        grid-area: Historial;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Historial";
+}
+
+
+// ESTILOS
+
+.mainHistorial{
+
+    h1{
+        font-size: 3.5rem;
+        color: $colorblanco;
+        margin-bottom: 5rem;
+        font-weight: bold;
+        text-align: start;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        div{
+            @extend .taling-bgcolor;
+            margin: 2em 1em 2em 1em;
+            padding: 0.6rem;
+        }
+    }
+}
+
+
+//--------------MAIN SOBRE NOSOTROS--------------
+
+//LAYOUT
+
+.mainSobreNosotros{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    div{
+        grid-area: Historia;
+    }
+
+    aside{
+        grid-area: Aside;
+        display: none;
+    }
+
+    display: grid;
+    grid-template-areas: 
+    "Titulo"
+    "Historia"
+    "Aside";
+    grid-template-columns: 1fr;
+}
+
+
+// ESTILOS
+
+.mainSobreNosotros{
+    margin: 0.5em 0.5em 2em 0.5em;
+    text-align: start;
+
+    h1{
+        font-size: 3.5rem;
+        color: $colorblanco;
+        margin-bottom: 5rem;
+        font-weight: bold;
+    }
+
+    p{
+        border-top: none;
+        color: $colorblanco;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+//--------------MAIN CONTACTOS--------------
+
+// LAYOUT
+
+.mainContactos{
+
+    h1{
+        grid-area: Titulo;
+    }
+
+    h2{
+        grid-area: Subtitulo;
+    }
+
+    .divUbicacion{
+        grid-area: Ubicacion;
+    }
+
+    .divRedes{
+        grid-area: Redes;
+    }
+
+    .form{
+        grid-area: Formulario;
+    }
+
+    display: grid;
+    grid-template-areas: 
+        "Titulo"
+        "Subtitulo"
+        "Ubicacion"
+        "Redes"
+        "Formulario";
+}
+
+
+// ESTILOS
+
+.mainContactos{
+    margin: 0 1em 0 1em;
+    text-align: start;
+    color: $colorblanco;
+
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+        font-weight: bold;
+    }
+
+    h2{
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    p{
+        border-top: none;
+    }
+
+    .divUbicacion{
+        margin: 0.5em 0 2em 0;
+    }
+
+    .divRedes{
+        margin: 0.5em 0 2em 0;
+
+        div{
+            display: flex;
+            justify-content: center;
+
+            a{
+                img{
+                    font-size: 0.7rem;
+                    margin: 1.5em;
+                    justify-content: space-around;
+
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+
+    .form{
+
+        section{
+            background-color: $colornonegro;
+            margin: 1em 2em 2em 2em;
+            padding: 2em;
+            color: $colorverdeagua;
+
+            article{
+                text-align: start;
+                
+                form{
+                    label{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

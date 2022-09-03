@@ -3,9 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 .taling-bgcolor, .mainHistorial section div, .mainMisCompras section div, .mainProductos section div {
   text-align: start;
-  background-color: #219ebc;
+  background-color: white;
 }
 
 * {
@@ -13,12 +15,16 @@
   padding: 0;
 }
 
+main {
+  margin: 1rem;
+}
+
 body {
   text-align: center;
   min-height: 100%;
   min-width: 100%;
   font-family: "Oswald", sans-serif;
-  background-color: #8ecae6;
+  background-color: #F38D68;
 }
 
 img {
@@ -26,48 +32,99 @@ img {
   height: 10em;
 }
 
+a {
+  text-decoration: none;
+}
+
+p {
+  border-top: 1px solid #662C91;
+}
+
 .bg-color-naranjita {
-  background-color: #ffb703;
+  background-color: white;
 }
 
 header {
   margin-bottom: 2rem;
 }
 header nav .navbarfont {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   font-family: "Oswald", sans-serif;
-  color: #219ebc;
+  color: #F38D68;
+}
+header nav .navhover {
+  transition: all 0.5s;
+}
+header nav .navhover:hover {
+  color: #EE6C4D;
 }
 
 footer {
-  background-color: #219ebc;
+  background-color: #33312E;
   padding-top: 0.5em;
   margin-top: 0.5em;
 }
 footer section {
-  padding: 0.3em;
-  background-color: #219ebc;
+  text-align: start;
+  font-family: "Bebas Neue", cursive;
+  padding: 1.8em;
+  background-color: #33312E;
   display: flex;
   flex-direction: column;
+  color: #17A398;
 }
-footer section h3, footer section p {
+footer section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+footer section p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  border-top: none;
+  margin: 1.5em 4em 2.5em 0;
+}
+footer section h3 {
   margin: 1em 0 1em 0;
-  text-align: center;
   font-size: 1.5rem;
 }
-footer section div {
-  display: flex;
-  justify-content: space-around;
-  margin: 1em 0 1em 0;
+footer section ul {
+  margin: 0;
 }
-footer section div a img {
-  height: 5rem;
-  width: 5rem;
-  transition: all 0.5s;
+footer section ul h3 {
+  margin-bottom: 1rem;
 }
-footer section div a img:hover {
-  transform: scale(1.3);
+footer section ul .email {
+  margin-top: 2.5em;
+}
+footer section a {
+  text-decoration: none;
+}
+footer section a p {
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #17A398;
+  display: inline-block;
+  position: relative;
+}
+footer section a p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #17A398;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+footer section a p:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 header {
@@ -102,18 +159,11 @@ body {
     grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
   }
 }
-main {
-  margin: 1.5rem;
-}
-
 .mainIndex {
   display: grid;
-  grid-template-areas: "Titulo" "Slogan" "Ofertas" "Interesar" "Novedades";
+  grid-template-areas: "Slogan" "Ofertas" "Interesar" "Novedades";
 }
 .mainIndex h1 {
-  grid-area: Titulo;
-}
-.mainIndex h2 {
   grid-area: Slogan;
 }
 .mainIndex .sectionOferta {
@@ -127,25 +177,43 @@ main {
 }
 
 .mainIndex h1 {
-  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  color: white;
+  margin: 0 3rem 5rem 0;
   font-weight: bold;
+  text-align: start;
 }
 .mainIndex h2 {
-  margin-bottom: 2rem;
+  color: white;
+}
+.mainIndex p {
+  border-top: 1px solid #662C91;
 }
 .mainIndex .sectionOferta {
   display: flex;
   flex-direction: column;
-  background-color: #219ebc;
-  padding: 2em;
-  border-radius: 1em;
-  margin: 0 1em 2em 1em;
+  background-color: #662C91;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.mainIndex .sectionOferta h2, .mainIndex .sectionOferta p {
+  color: white;
+}
+.mainIndex .sectionOferta .productoOferta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 455px) {
+  .mainIndex .sectionOferta .productoOferta {
+    flex-direction: column;
+  }
 }
 .mainIndex .sectionOferta .productoOferta div {
-  background-color: #ffb703;
-  border-radius: 1rem;
+  width: auto;
+  background-color: white;
   padding: 1rem;
-  margin: 1.7em;
+  margin-bottom: 1.7em;
   transition: all 0.5s;
 }
 .mainIndex .sectionOferta .productoOferta div:hover {
@@ -156,14 +224,17 @@ main {
 }
 .mainIndex .sectionOferta .productoOferta div p {
   margin-top: 0.5em;
+  color: black;
   text-align: start;
 }
 .mainIndex .sectionInteresar {
-  margin: 3em 0 3em 0;
+  margin-bottom: 3em;
+}
+.mainIndex .sectionInteresar h2 {
+  text-align: start;
 }
 .mainIndex .sectionInteresar div {
-  background-color: #ffb703;
-  border-radius: 1rem;
+  background-color: white;
   padding: 1rem;
   margin: 1.7em;
   transition: all 0.5s;
@@ -181,36 +252,126 @@ main {
 
 .mainProductos {
   display: grid;
-  grid-template-areas: "Titulo" "Productos";
+  grid-template-areas: "Titulo" "Subtitulo" "Productos";
 }
 .mainProductos h1 {
   grid-area: Titulo;
+}
+.mainProductos h2 {
+  grid-area: Subtitulo;
 }
 .mainProductos section {
   grid-area: Productos;
 }
 
+.mainProductos h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  text-align: start;
+}
+.mainProductos h2 {
+  text-align: start;
+  font-family: "Bebas Neue", cursive;
+  color: #662C91;
+  position: relative;
+}
+.mainProductos h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #662C91;
+}
+.mainProductos .sectionproductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.mainProductos .sectionproductos div {
+  width: 40vw;
+  background-color: white;
+  align-items: stretch;
+  padding: 1rem;
+  margin-bottom: 1.7em;
+  transition: all 0.5s;
+}
+.mainProductos .sectionproductos div:hover {
+  transform: scale(1.1);
+}
+.mainProductos .sectionproductos div img {
+  height: 25vh;
+  margin: auto;
+}
+.mainProductos .sectionproductos div p {
+  margin-top: 0.5em;
+  color: black;
+  text-align: start;
+}
+.mainProductos .sectionproductos div p::after {
+  display: none;
+}
 .mainProductos section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-family: Oswald;
 }
 .mainProductos section div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em 1em 2em 1em;
-  padding: 0.6rem;
-  border-radius: 1rem;
-  transition: all 0.5s;
+  background-color: #662C91;
+  margin: 2em 0 0.5rem 0;
+  padding: 0.2rem;
+  position: relative;
 }
 .mainProductos section div img {
-  width: 10em;
-  height: 10em;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  transition: transform 1s;
+  display: block;
 }
-.mainProductos section div p {
-  align-self: start;
+.mainProductos section div .parrafoshover {
+  position: absolute;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+  background-color: rgba(51, 49, 46, 0.7);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.mainProductos section div:hover .parrafoshover {
+  opacity: 1;
+}
+.mainProductos section .parrafosecciones {
+  color: #662C91;
+  border-top: none;
+  margin-bottom: 2.5rem;
+  text-align: start;
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: relative;
+}
+.mainProductos section .parrafosecciones::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2.3rem;
+  left: 0;
+  background-color: #662C91;
 }
 
 .mainMisCompras {
@@ -224,6 +385,13 @@ main {
   grid-area: MisCompras;
 }
 
+.mainMisCompras h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  text-align: start;
+}
 .mainMisCompras section {
   display: flex;
   flex-direction: column;
@@ -232,7 +400,9 @@ main {
 .mainMisCompras section div {
   margin: 2em 1em 2em 1em;
   padding: 0.6rem;
-  border-radius: 1rem;
+}
+.mainMisCompras section div img {
+  margin-bottom: 0.5rem;
 }
 
 .mainHistorial {
@@ -246,6 +416,13 @@ main {
   grid-area: Historial;
 }
 
+.mainHistorial h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  text-align: start;
+}
 .mainHistorial section {
   display: flex;
   flex-direction: column;
@@ -254,7 +431,6 @@ main {
 .mainHistorial section div {
   margin: 2em 1em 2em 1em;
   padding: 0.6rem;
-  border-radius: 1rem;
 }
 
 .mainSobreNosotros {
@@ -275,6 +451,18 @@ main {
 
 .mainSobreNosotros {
   margin: 0.5em 0.5em 2em 0.5em;
+  text-align: start;
+}
+.mainSobreNosotros h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 5rem;
+  font-weight: bold;
+}
+.mainSobreNosotros p {
+  border-top: none;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .mainContactos {
@@ -299,9 +487,20 @@ main {
 
 .mainContactos {
   margin: 0 1em 0 1em;
+  text-align: start;
+  color: white;
 }
-.mainContactos h1, .mainContactos h2 {
+.mainContactos h1 {
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+  font-weight: bold;
+}
+.mainContactos h2 {
   margin-bottom: 1em;
+  text-align: center;
+}
+.mainContactos p {
+  border-top: none;
 }
 .mainContactos .divUbicacion {
   margin: 0.5em 0 2em 0;
@@ -322,10 +521,10 @@ main {
   transform: scale(1.3);
 }
 .mainContactos .form section {
-  background-color: #219ebc;
+  background-color: #33312E;
   margin: 1em 2em 2em 2em;
   padding: 2em;
-  border-radius: 1em;
+  color: #17A398;
 }
 .mainContactos .form section article {
   text-align: start;
@@ -343,9 +542,8 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
-    background-color: #219ebc;
+    background-color: #662C91;
     padding: 2em;
-    border-radius: 1em;
   }
   .mainIndex .sectionOferta .productoOferta {
     display: flex;
@@ -356,31 +554,70 @@ main {
     width: 12.5rem;
     padding: 1.5rem;
   }
+}
+@media (min-width: 500px) and (min-width: 700px) {
+  .mainIndex .sectionint {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 500px) {
   .mainProductos {
     display: grid;
-    grid-template-areas: "Titulo Titulo" "Productos Productos";
+    grid-template-areas: "Titulo Titulo" "Subtitulo Subtitulo" "Productos Productos";
   }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .mainProductos section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .mainProductos section a {
+    width: auto;
+    height: auto;
+  }
+  .mainProductos section a div {
+    width: 20rem;
+  }
+  .mainProductos section a div img {
+    height: 50vh;
+  }
+  .mainProductos section a p::after {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
   .mainMisCompras {
     display: grid;
     grid-template-areas: "Titulo Titulo" "MisCompras MisCompras";
   }
+}
+@media (min-width: 500px) {
   .mainHistorial {
     display: grid;
     grid-template-areas: "Titulo Titulo" "Historial Historial";
   }
+}
+@media (min-width: 500px) {
   .mainSobreNosotros {
     display: grid;
-    grid-template-areas: "Aside Titulo Titulo" "Aside Historia Historia";
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "Titulo Titulo" "Historia Historia";
+    grid-template-columns: 2fr 2fr;
   }
   .mainSobreNosotros aside {
     grid-area: Aside;
     display: block;
   }
+}
+@media (min-width: 500px) {
   .mainContactos {
     display: grid;
     grid-template-areas: "Titulo Titulo" "Subtitulo Subtitulo" "Ubicacion Ubicacion" "Redes Redes" "Formulario Formulario";
   }
+}
+@media (min-width: 500px) {
   .mainContactos .divUbicacion {
     text-align: start;
   }
@@ -423,7 +660,10 @@ main {
   }
   .mainProductos {
     display: grid;
-    grid-template-areas: "Titulo Titulo Titulo Titulo" "Productos Productos Productos Productos";
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Subtitulo Subtitulo Subtitulo Subtitulo" "Productos Productos Productos Productos";
+  }
+  .mainProductos .sectionproductos div {
+    width: 20vw;
   }
   .mainMisCompras {
     display: grid;
@@ -447,7 +687,7 @@ main {
     grid-template-areas: "Titulo Titulo Titulo Titulo" "Subtitulo Subtitulo Subtitulo Subtitulo" "Ubicacion Ubicacion Ubicacion Ubicacion" "Redes Redes Redes Redes" "Formulario Formulario Formulario Formulario";
   }
   .mainContactos h1 {
-    text-align: center;
+    text-align: start;
   }
   .mainContactos .divUbicacion {
     text-align: start;
@@ -468,4 +708,4 @@ main {
   .mainContactos .form section article form input {
     margin-bottom: 1rem;
   }
-}/*# sourceMappingURL=sass.css.map */
+}/*# sourceMappingURL=style.css.map */

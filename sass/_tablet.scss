@@ -1,0 +1,243 @@
+//--------------------------------TABLET STYLES--------------------------------//
+
+@media (min-width: 500px){
+
+    //--------------MAIN INDEX--------------
+
+    // LAYOUT
+
+    .mainIndex{
+        display: grid;
+        grid-template-areas: 
+        "Titulo Titulo"
+        "Slogan Slogan"
+        "Ofertas Ofertas"
+        "Interesar Interesar"
+        "Novedades Novedades";
+    }
+
+
+    // ESTILOS
+
+    .mainIndex{
+
+        .sectionOferta{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+            background-color: $colorvioleta;
+            padding: 2em;
+
+            .productoOferta{
+                display: flex;
+                justify-content: space-around;
+
+                div{
+                    justify-content: center;
+                    width: 12.5rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+
+        @media (min-width:700px){
+            .sectionint{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+
+
+    //--------------MAIN PRODUCTOS--------------
+
+    //LAYOUT
+
+    .mainProductos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Subtitulo Subtitulo"
+            "Productos Productos";
+    }
+
+    // ESTILOS
+
+    @media(min-width:800px){
+
+        .mainProductos{
+            section{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                
+
+                a{
+                    width: auto;
+                    height: auto;
+
+                    div{
+
+                        width: 20rem;
+
+                        img{
+                            height: 50vh;
+                        }
+                    }
+
+
+                    p::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+    //--------------MAIN MIS COMPRAS--------------
+
+    // LAYOUT
+
+    .mainMisCompras{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "MisCompras MisCompras";
+    }
+
+    // ESTILOS
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN HISTORIAL--------------
+
+    // LAYOUT
+
+    .mainHistorial{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Historial Historial";
+    }
+
+    // ESTILOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN SOBRE NOSOTROS--------------
+
+    //LAYOUT
+
+    .mainSobreNosotros{
+        aside{
+            grid-area: Aside;
+            display: block;
+        }
+
+        display: grid;
+        grid-template-areas: 
+        "Titulo Titulo"
+        "Historia Historia";
+        grid-template-columns: 2fr 2fr;
+    }
+
+    // ESTILOS
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN CONTACTOS--------------
+
+    // LAYOUT
+
+    .mainContactos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo"
+            "Subtitulo Subtitulo"
+            "Ubicacion Ubicacion"
+            "Redes Redes"
+            "Formulario Formulario";
+    }
+
+    // ESTILOS
+
+    .mainContactos{
+
+        .divUbicacion{
+            text-align: start;
+        }
+
+        .divRedes{
+
+            h3{
+                text-align: start;
+            }
+
+            div{
+                a{
+                    img{
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .form{
+            
+            h3{
+                text-align: start;
+            }
+
+            section{
+
+                article{
+
+                    form{
+                        display: flex;
+                        flex-direction: column;
+
+                        input{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

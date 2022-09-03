@@ -3,12 +3,16 @@
     padding: 0;
 }
 
+main{
+    margin: 1rem;
+}
+
 body{
     text-align: center;
     min-height: 100%;
     min-width: 100%;
     font-family: 'Oswald', sans-serif;
-    background-color: $bgceleste;
+    background-color: $colorsalmon;
 }
 
 img{
@@ -16,8 +20,16 @@ img{
     height: 10em;
 }
 
+a{
+    text-decoration: none;
+}
+
+p{
+    border-top: 1px solid $colorvioleta;
+}
+
 .bg-color-naranjita{
-    background-color: $bgnaranjaclaro;
+    background-color: $colorblanco;
 }
 
 
@@ -28,10 +40,17 @@ header{
 
     nav{
         .navbarfont{
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             font-family: 'Oswald', sans-serif;
-            color: $bgazul;
+            color: $colorsalmon
+        }
+
+        .navhover{
+            transition: all 0.5s;
+            &:hover{
+                color: $coloroscuro;
+            }
         }
     }
 }
@@ -40,36 +59,79 @@ header{
 // FOOTER - GENERAL
 
 footer{
-    background-color: $bgazul;
+    background-color: $colornonegro;
     padding-top: 0.5em;
     margin-top: 0.5em;
 
     section{
-        padding: 0.3em;
-        background-color: $bgazul;
+        text-align: start;
+        font-family: 'Bebas Neue', cursive;
+        padding: 1.8em;
+        background-color: $colornonegro;
         display: flex;
         flex-direction: column;
+        color: $colorverdeagua;
 
-        h3,p{
+        h2{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;  
+            border-top: none;
+            margin: 1.5em 4em 2.5em 0;
+        }
+
+        h3{
+
             margin: 1em 0 1em 0;
-            text-align: center;
             font-size: 1.5rem;
         }
 
-        div{
-            display: flex;
-            justify-content: space-around;
-            margin: 1em 0 1em 0;
+        ul{
+            margin: 0;
 
-            a{
-                img{
-                    @include sizes(5rem, 5rem);
-                    transition:all 0.5s;
+            h3{
+                margin-bottom: 1rem;
+            }
 
-                    &:hover{
-                        transform: scale(1.3);
-                    }
-                }                
+            .email{
+                margin-top: 2.5em;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            
+            p{
+                margin: 0 0 0 1rem;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: $colorverdeagua;
+                display: inline-block;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $colorverdeagua;
+                    transform: scaleX(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.4s ease-out;
+                }
+
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
             }
         }
     }

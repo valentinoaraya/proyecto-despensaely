@@ -1,0 +1,223 @@
+//--------------------------------DESKTOP STYLES--------------------------------//
+
+
+@media (min-width: 1024px){
+
+    body{
+        text-align: start;
+    }
+
+    //--------------MAIN INDEX--------------
+
+    // LAYOUT
+
+    .mainIndex{
+        display: grid;
+        grid-template-areas: 
+        "Titulo Titulo Titulo Titulo"
+        "Slogan Slogan Slogan Slogan"
+        "Ofertas Ofertas Ofertas Ofertas"
+        "Interesar Interesar Interesar Interesar"
+        "Novedades Novedades Novedades Novedades";
+    }
+
+
+    // ESTILOS
+
+    .mainIndex{
+
+        .sectionOferta{
+           
+            h2{
+                text-align: start;
+            }
+
+            .productoOferta{
+                display: flex;
+                justify-content: space-around;
+
+                div{
+                    justify-content: center;
+                    width: 12.5rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+
+    //--------------MAIN PRODUCTOS--------------
+
+    //LAYOUT
+
+    .mainProductos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Subtitulo Subtitulo Subtitulo Subtitulo"
+            "Productos Productos Productos Productos";
+    }
+
+    // ESTILOS
+
+    .mainProductos{
+        .sectionproductos{
+            div{
+                width: 20vw;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN MIS COMPRAS--------------
+
+    // LAYOUT
+
+    .mainMisCompras{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "MisCompras MisCompras MisCompras MisCompras";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN HISTORIAL--------------
+
+    // LAYOUT
+
+    .mainHistorial{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Historial Historial Historial Historial";
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN SOBRE NOSOTROS--------------
+
+    //LAYOUT
+
+    .mainSobreNosotros{
+        aside{
+            grid-area: Aside;
+            display: block;
+        }
+
+        display: grid;
+        grid-template-areas: 
+        "Aside Titulo Titulo Titulo"
+        "Aside Historia Historia Historia";
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+    }
+
+    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+
+
+
+
+
+
+
+
+
+
+
+
+    //--------------MAIN CONTACTOS--------------
+
+    // LAYOUT
+
+    .mainContactos{
+        display: grid;
+        grid-template-areas: 
+            "Titulo Titulo Titulo Titulo"
+            "Subtitulo Subtitulo Subtitulo Subtitulo"
+            "Ubicacion Ubicacion Ubicacion Ubicacion"
+            "Redes Redes Redes Redes"
+            "Formulario Formulario Formulario Formulario";
+    }
+
+    // ESTILOS
+
+    .mainContactos{
+
+        h1{
+            text-align: start;
+        }
+
+        .divUbicacion{
+            text-align: start;
+        }
+
+        .divRedes{
+
+            h3{
+                text-align: start;
+            }
+
+            div{
+                a{
+                    img{
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .form{
+            
+            h3{
+                text-align: start;
+            }
+
+            section{
+
+                article{
+
+                    form{
+                        display: flex;
+                        flex-direction: column;
+
+                        input{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,18 @@
 // Variables
 
-$bgazul:#219ebc;
-$bgceleste:#8ecae6;
-$bgnaranja:#fb8500;
-$bgnaranjaclaro:#ffb703;
+$colorblanco:white;
+$colorverdeagua:#17A398;
+$coloroscuro:#EE6C4D;
+$colorsalmon:#F38D68;
+$colorvioleta: #662C91;
+$colornonegro: #33312E;
+$colornegro:black;
 
 // Extend
 
 .taling-bgcolor{
     text-align: start;
-    background-color: $bgazul;
+    background-color: $colorblanco;
 }
 
 
