@@ -9,7 +9,6 @@
     .mainIndex{
         display: grid;
         grid-template-areas: 
-        "Titulo Titulo"
         "Slogan Slogan"
         "Ofertas Ofertas"
         "Interesar Interesar"
@@ -25,7 +24,7 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 1em;
-            background-color: $colorvioleta;
+            background-color: $colorblanco;
             padding: 2em;
 
             .productoOferta{
@@ -58,45 +57,28 @@
     .mainProductos{
         display: grid;
         grid-template-areas: 
-            "Titulo Titulo"
-            "Subtitulo Subtitulo"
-            "Productos Productos";
+        "Titulo Titulo"
+        "Productos Productos"
+        "Imagenes Imagenes"
+        "Comida Comida"
+        "Bebida Bebida"
+        "Limpieza Limpieza"
+        "Regalería Regalería";
     }
 
     // ESTILOS
 
-    @media(min-width:800px){
+    .mainProductos{
 
-        .mainProductos{
-            section{
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                
+        .imgsections{
+            justify-content: space-around;
 
-                a{
-                    width: auto;
-                    height: auto;
-
-                    div{
-
-                        width: 20rem;
-
-                        img{
-                            height: 50vh;
-                        }
-                    }
-
-
-                    p::after{
-                        display: none;
-                    }
-                }
+            img{
+                height: 8rem;
+                width: 8rem;
             }
         }
-
     }
-
 
 
 
@@ -115,7 +97,12 @@
 
     // ESTILOS
 
+    .mainMisCompras{
 
+        .miscomprasProductos{
+            justify-content: space-around;
+        }
+    }
 
 
 
@@ -156,21 +143,49 @@
     //LAYOUT
 
     .mainSobreNosotros{
-        aside{
-            grid-area: Aside;
-            display: block;
-        }
-
         display: grid;
         grid-template-areas: 
         "Titulo Titulo"
+        "NuestraHistoria NuestraHistoria"
         "Historia Historia";
         grid-template-columns: 2fr 2fr;
     }
 
     // ESTILOS
 
+    .mainSobreNosotros{
 
+        .nombreQuienesSomos{
+            background-image: url(../imágenes/fondo3.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .historia{
+            div{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around; 
+
+                img{
+                    margin-bottom: 3rem;
+
+                    @media (min-width:781px) {
+                        margin-right: 5rem;
+                    }
+                }
+
+                p{
+                    align-self: center;
+
+                 
+                    
+
+                }
+            }
+        }
+    }
 
 
 
@@ -199,21 +214,23 @@
 
     .mainContactos{
 
-        .divUbicacion{
-            text-align: start;
+        .nombreContactos{
+            background-image: url(../imágenes/fondo5.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        .divRedes{
+        .redesubi{
 
-            h3{
-                text-align: start;
-            }
+            .divRedes{
 
-            div{
-                a{
-                    img{
-                        transition: all 0.5s;
-                    }
+                h3{
+                    text-align: start;
+                }
+    
+                div{
+                    justify-content: start;
                 }
             }
         }

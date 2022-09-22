@@ -5,7 +5,7 @@
 // LAYOUT
 
 .mainIndex{
-    h1{
+    .nombre{
         grid-area: Slogan;
     }
 
@@ -32,40 +32,64 @@
 // ESTILOS 
 
 .mainIndex{
-    h1{
-        font-size: 3.5rem;
-        color: $colorblanco;
-        margin: 0 3rem 5rem 0;
-        font-weight: bold;
-        text-align: start;
-    }
 
-    h2{
-        color: $colorblanco
-    }
+    .nombre{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Bebas Neue', cursive;
 
-    p{
-        border-top: 1px solid $colorvioleta;
+        height: 100vh;
+        width: 100vw;
+        background-image: url(../imágenes/Despensa\ Ely.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h1{
+            font-size: 5rem;
+            color: $colorblanco;
+            margin: 0 0 1rem 0;
+            font-weight: bold;
+        }
+
+        h2{
+            font-size: 2rem;
+            color: $colorblanco;
+            font-family: 'Oswald', sans-serif;
+        }
     }
 
     .sectionOferta{
         display: flex;
         flex-direction: column;
-        background-color: $colorvioleta;
+        background-color: $colorblanco;
         padding: 1em;
         margin-bottom: 2em;
+        color: $colorsalmon;
 
-        h2, p{
-            color: $colorblanco
+        h2{
+            font-size: 3.5rem;
+            margin-top: 1.5rem;
+        }
+
+        p{
+            font-size: 1.5rem;
         }
     
         .productoOferta{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 2.5rem;
 
             @media(max-width:455px){
                 flex-direction: column;
+            }
+
+            p{
+                font-size: 1rem;
             }
 
             div{
@@ -74,7 +98,9 @@
                 padding: 1rem;
                 margin-bottom: 1.7em;
                 transition: all 0.5s;
-    
+                border: 1px solid $colorsalmon;
+                transition: all 0.5s;
+
                 &:hover{
                     transform: scale(1.1);
                 }
@@ -87,6 +113,7 @@
                     margin-top: 0.5em;
                     color: $colornegro;
                     text-align: start;
+                    border-top: 1px solid $colorsalmon;
                 }
             }
         }
@@ -94,6 +121,8 @@
 
     .sectionInteresar{
         margin-bottom: 3em;
+        padding: 1rem;
+        color: $colorblanco;
     
         h2{
             text-align: start;
@@ -115,7 +144,9 @@
 
             p{
                 margin-top: 0.5em;
+                border-top: 1px solid $colorsalmon;
                 text-align: start;
+                color: $colorverdeagua;
             }
         }
     }
@@ -128,75 +159,145 @@
 //LAYOUT
 
 .mainProductos{
-    h1{
+    
+    .nombreProductos{
         grid-area: Titulo;
-    }
-
-    h2{
-        grid-area: Subtitulo;
     }
 
     section{
         grid-area: Productos;
     }
 
+    .imgsections{
+        grid-area: Imagenes;
+    }
+
+    .comida{
+        grid-area: Comida;
+    }
+
+    .bebida{
+        grid-area: Bebida;
+    }
+
+    .limpieza{
+        grid-area: Limpieza;
+    }
+
+    .regaleria{
+        grid-area: Regalería;
+    }
+
     display: grid;
     grid-template-areas: 
         "Titulo"
-        "Subtitulo"
-        "Productos";
+        "Productos"
+        "Imagenes"
+        "Comida"
+        "Bebida"
+        "Limpieza"
+        "Regalería";
 }
 
 // ESTILOS
 
 .mainProductos{
+    text-align: start;
 
-    h1{
-        font-size: 3.5rem;
+    .nombreProductos{
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        height: 100vh;
+        width: 100vw;
+        background-image: url(../imágenes/fondo.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h1{
+            font-size: 3.5rem;
+            color: $colorblanco;
+            margin: 3rem 1rem 0 1rem;
+            font-weight: bold;
+        }
+
+        h2{
+            margin: 1rem 1rem 3rem 1rem;
         color: $colorblanco;
-        margin-bottom: 5rem;
-        font-weight: bold;
-        text-align: start;
-    }
-
-    h2{
-        text-align: start;
-        font-family: 'Bebas Neue', cursive;
-        color: $colorvioleta;
-        
-        position: relative;
-
-        &::after{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: $colorvioleta;
         }
     }
 
-    .sectionproductos{
+    section{
+        background-color: $colorblanco;
+
+        h2{
+            color: $colorsalmon;
+            margin: 1rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            color: $colorsalmon;
+            margin: 0 1rem 4rem 1rem;
+        }
+    }
+
+    .imgsections{
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 55%;
+
+        img{
+            height: 6.5rem;
+            width: 6.5rem;
+        }
+    }
+    
+    .comida, .bebida, .limpieza, .regaleria{
+        background-color: $colorblanco;
+        text-align: center;
+
+        h2{
+            color: $colorsalmon;
+            margin: 1rem;
+        }
+    }
+
+    .comidaProductos{
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-color: $colorsalmon;
+        padding: 1rem;
+
+        @media(max-width:455px){
+            flex-direction: column;
+        }
+
+        p{
+            font-size: 1rem;
+            margin: 1rem;
+        }
 
         div{
-            width: 40vw;
+            width: auto;
             background-color: $colorblanco;
-            align-items: stretch;
             padding: 1rem;
             margin-bottom: 1.7em;
             transition: all 0.5s;
-    
+            border: 1px solid $colorsalmon;
+            transition: all 0.5s;
+            
             &:hover{
                 transform: scale(1.1);
             }
     
             img{
-                height: 25vh;
                 margin: auto;
             }
     
@@ -204,76 +305,7 @@
                 margin-top: 0.5em;
                 color: $colornegro;
                 text-align: start;
-
-                &::after{
-                    display: none;
-                }
-            }
-        }    
-    }
-
-    section{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $colorvioleta;
-            @extend .taling-bgcolor;
-            margin: 2em 0 0.5rem 0;
-            padding: 0.2rem;
-            position: relative;
-
-            img{
-                width: 100%;
-                height: 50vh;
-                position: relative;
-                transition: transform 1s;
-                display: block;
-            }
-
-            .parrafoshover{
-                position: absolute;
-                font-family: 'Bebas Neue', cursive;
-                font-size: 3rem;
-                background-color: rgba(51, 49, 46, 0.7);
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $colorblanco;
-                transition: opacity 0.5s ease-in-out;
-                opacity: 0;
-            }
-
-            &:hover .parrafoshover{
-                opacity: 1;
-            }
-        }
-
-        .parrafosecciones{
-            color: $colorvioleta;
-            border-top: none;
-            margin-bottom: 2.5rem;
-            text-align: start;
-            font-size: 1.3rem;
-            font-weight: 500;
-            position: relative;
-
-            &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: -2.3rem;
-                left: 0;
-                background-color: $colorvioleta;
+                border-top: 1px solid $colorsalmon;
             }
         }
     }
@@ -322,26 +354,55 @@
     h1{
         font-size: 3.5rem;
         color: $colorblanco;
-        margin-bottom: 5rem;
+        margin: 1rem;
         font-weight: bold;
         text-align: start;
     }
 
-    section{
+    .miscomprasProductos{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: $colorsalmon;
+        padding: 1rem;
+        
+
+        @media(max-width:455px){
+            flex-direction: column;
+        }
+
+        p{
+            font-size: 1rem;
+            margin: 1rem;
+        }
 
         div{
-            @extend .taling-bgcolor;
-            margin: 2em 1em 2em 1em;
-            padding: 0.6rem;
+            width: auto;
+            background-color: $colorblanco;
+            padding: 1rem;
+            margin-bottom: 1.7em;
+            transition: all 0.5s;
+            border: 1px solid $colorsalmon;
 
+            transition: all 0.5s;
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+    
             img{
-                margin-bottom: 0.5rem;
+                margin: auto;
+            }
+    
+            p{
+                margin-top: 0.5em;
+                color: $colornegro;
+                text-align: start;
+                border-top: 1px solid $colorsalmon;
             }
         }
     }
+
 }
 
 
@@ -375,20 +436,51 @@
     h1{
         font-size: 3.5rem;
         color: $colorblanco;
-        margin-bottom: 5rem;
+        margin: 1rem;
         font-weight: bold;
         text-align: start;
     }
 
-    section{
+    .historialProductos{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: $colorsalmon;
+        padding: 1rem;
+        
+
+        @media(max-width:455px){
+            flex-direction: column;
+        }
+
+        p{
+            font-size: 1rem;
+            margin: 1rem;
+        }
 
         div{
-            @extend .taling-bgcolor;
-            margin: 2em 1em 2em 1em;
-            padding: 0.6rem;
+            width: auto;
+            background-color: $colorblanco;
+            padding: 1rem;
+            margin-bottom: 1.7em;
+            transition: all 0.5s;
+            border: 1px solid $colorsalmon;
+            transition: all 0.5s;
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+    
+            img{
+                margin: auto;
+            }
+    
+            p{
+                margin-top: 0.5em;
+                color: $colornegro;
+                text-align: start;
+                border-top: 1px solid $colorsalmon;
+            }
         }
     }
 }
@@ -400,24 +492,23 @@
 
 .mainSobreNosotros{
 
-    h1{
+    .nombreQuienesSomos{
         grid-area: Titulo;
     }
 
-    div{
-        grid-area: Historia;
+    h2{
+        grid-area: NuestraHistoria;
     }
 
-    aside{
-        grid-area: Aside;
-        display: none;
+    .historia{
+        grid-area: Historia;
     }
 
     display: grid;
     grid-template-areas: 
     "Titulo"
-    "Historia"
-    "Aside";
+    "NuestraHistoria"
+    "Historia";
     grid-template-columns: 1fr;
 }
 
@@ -425,21 +516,68 @@
 // ESTILOS
 
 .mainSobreNosotros{
-    margin: 0.5em 0.5em 2em 0.5em;
-    text-align: start;
+    text-align: center;
 
-    h1{
-        font-size: 3.5rem;
-        color: $colorblanco;
-        margin-bottom: 5rem;
-        font-weight: bold;
+    .nombreQuienesSomos{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        height: 100vh;
+        width: 100vw;
+        background-image: url(../imágenes/fondosobrenosotros.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h1{
+            font-size: 3.5rem;
+            color: $colorblanco;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+            font-weight: bold;
+        }
+
+        p{
+            display: none;
+        }
     }
 
-    p{
-        border-top: none;
-        color: $colorblanco;
-        font-size: 1.5rem;
+    h2{
+        margin: 0;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        font-family: 'Bebas Neue', cursive;
+        color: $colorsalmon;
+        font-size: 3rem;
+        background-color: $colorblanco;
     }
+
+    .historia{
+        background-color: $colorblanco;
+        padding: 2rem;
+
+        p{
+            border-top: none;
+            color: $colorsalmon;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        div{
+            
+            p{
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3rem;
+            }
+
+            img{
+                height: 12rem;
+                width: 20rem;
+            }
+        }   
+    }    
 }
 
 
@@ -450,77 +588,92 @@
 
 .mainContactos{
 
-    h1{
+    .nombreContactos{
         grid-area: Titulo;
     }
 
-    h2{
+    .redesubi{
         grid-area: Subtitulo;
     }
 
-    .divUbicacion{
-        grid-area: Ubicacion;
-    }
-
-    .divRedes{
-        grid-area: Redes;
-    }
-
-    .form{
-        grid-area: Formulario;
-    }
 
     display: grid;
     grid-template-areas: 
         "Titulo"
-        "Subtitulo"
-        "Ubicacion"
-        "Redes"
-        "Formulario";
+        "Subtitulo";
 }
 
 
 // ESTILOS
 
 .mainContactos{
-    margin: 0 1em 0 1em;
+    margin: 0;
     text-align: start;
     color: $colorblanco;
 
-    h1{
-        font-size: 3.5rem;
-        margin-bottom: 5rem;
-        font-weight: bold;
+    .nombreContactos{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        height: 100vh;
+        width: 100vw;
+        background-image: url(../imágenes/fondo2.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        h1{
+            font-size: 3.5rem;
+            color: $colorblanco;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+            font-weight: bold;
+        }
     }
+    
+    .redesubi{
+        padding: 2rem;
+        background-color: $colorblanco;
+        color: $colorsalmon;
 
-    h2{
-        margin-bottom: 1em;
-        text-align: center;
-    }
+        h2{
+            font-size: 3rem;
+            margin-bottom: 1em;
+            text-align: center;
+        }
 
-    p{
-        border-top: none;
-    }
+        h3{
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+        }
+    
+        p{
+            border-top: none;
+        }
+    
+        .divUbicacion{
+            margin: 0.5em 0 2em 0;
+        }
+    
+        .divRedes{
+            margin: 0.5em 0 2em 0;
+    
+            div{
+                display: flex;
+                justify-content: center;
+    
+                a{
+                    img{
+                        font-size: 0.7rem;
+                        margin: 1.5em;
+                        justify-content: space-around;
+                        transition: all 0.5s;
 
-    .divUbicacion{
-        margin: 0.5em 0 2em 0;
-    }
-
-    .divRedes{
-        margin: 0.5em 0 2em 0;
-
-        div{
-            display: flex;
-            justify-content: center;
-
-            a{
-                img{
-                    font-size: 0.7rem;
-                    margin: 1.5em;
-                    justify-content: space-around;
-
-                    &:hover{
-                        transform: scale(1.3);
+                        &:hover{
+                            transform: scale(1.3);
+                        }
                     }
                 }
             }
@@ -530,10 +683,11 @@
     .form{
 
         section{
-            background-color: $colornonegro;
+            background-color: $colorsalmon;
+            border-radius: 1rem;
             margin: 1em 2em 2em 2em;
             padding: 2em;
-            color: $colorverdeagua;
+            color: $colorblanco;
 
             article{
                 text-align: start;

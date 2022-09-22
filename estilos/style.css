@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
@@ -5,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-.taling-bgcolor, .mainHistorial section div, .mainMisCompras section div, .mainProductos section div {
+.taling-bgcolor {
   text-align: start;
   background-color: white;
 }
@@ -15,16 +16,12 @@
   padding: 0;
 }
 
-main {
-  margin: 1rem;
-}
-
 body {
   text-align: center;
   min-height: 100%;
   min-width: 100%;
   font-family: "Oswald", sans-serif;
-  background-color: #F38D68;
+  background-color: #657ed4;
 }
 
 img {
@@ -36,22 +33,13 @@ a {
   text-decoration: none;
 }
 
-p {
-  border-top: 1px solid #662C91;
-}
-
 .bg-color-naranjita {
   background-color: white;
 }
 
-header {
-  margin-bottom: 2rem;
-}
-header nav .navbarfont {
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: "Oswald", sans-serif;
-  color: #F38D68;
+header nav div a img {
+  width: 4rem;
+  height: 4rem;
 }
 header nav .navhover {
   transition: all 0.5s;
@@ -61,7 +49,7 @@ header nav .navhover:hover {
 }
 
 footer {
-  background-color: #33312E;
+  background-color: white;
   padding-top: 0.5em;
   margin-top: 0.5em;
 }
@@ -69,14 +57,21 @@ footer section {
   text-align: start;
   font-family: "Bebas Neue", cursive;
   padding: 1.8em;
-  background-color: #33312E;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  color: #17A398;
+  color: #657ed4;
+}
+footer section div img {
+  height: 6rem;
+  width: 6rem;
+  transition: all 0.5s;
+}
+footer section div img:hover {
+  transform: scale(1.1);
 }
 footer section h2 {
   font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 footer section p {
@@ -106,25 +101,7 @@ footer section a p {
   margin: 0 0 0 1rem;
   font-size: 1rem;
   font-weight: bolder;
-  color: #17A398;
-  display: inline-block;
-  position: relative;
-}
-footer section a p::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #17A398;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.4s ease-out;
-}
-footer section a p:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  color: #657ed4;
 }
 
 header {
@@ -145,9 +122,6 @@ body {
 }
 
 @media (min-width: 500px) {
-  header {
-    margin-bottom: 1rem;
-  }
   body {
     display: grid;
     grid-template-areas: "header header" "main main" "footer footer";
@@ -163,7 +137,7 @@ body {
   display: grid;
   grid-template-areas: "Slogan" "Ofertas" "Interesar" "Novedades";
 }
-.mainIndex h1 {
+.mainIndex .nombre {
   grid-area: Slogan;
 }
 .mainIndex .sectionOferta {
@@ -176,44 +150,66 @@ body {
   grid-area: Novedades;
 }
 
-.mainIndex h1 {
-  font-size: 3.5rem;
+.mainIndex .nombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Bebas Neue", cursive;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../imágenes/Despensa\ Ely.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainIndex .nombre h1 {
+  font-size: 5rem;
   color: white;
-  margin: 0 3rem 5rem 0;
+  margin: 0 0 1rem 0;
   font-weight: bold;
-  text-align: start;
 }
-.mainIndex h2 {
+.mainIndex .nombre h2 {
+  font-size: 2rem;
   color: white;
-}
-.mainIndex p {
-  border-top: 1px solid #662C91;
+  font-family: "Oswald", sans-serif;
 }
 .mainIndex .sectionOferta {
   display: flex;
   flex-direction: column;
-  background-color: #662C91;
+  background-color: white;
   padding: 1em;
   margin-bottom: 2em;
+  color: #657ed4;
 }
-.mainIndex .sectionOferta h2, .mainIndex .sectionOferta p {
-  color: white;
+.mainIndex .sectionOferta h2 {
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+}
+.mainIndex .sectionOferta p {
+  font-size: 1.5rem;
 }
 .mainIndex .sectionOferta .productoOferta {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 2.5rem;
 }
 @media (max-width: 455px) {
   .mainIndex .sectionOferta .productoOferta {
     flex-direction: column;
   }
 }
+.mainIndex .sectionOferta .productoOferta p {
+  font-size: 1rem;
+}
 .mainIndex .sectionOferta .productoOferta div {
   width: auto;
   background-color: white;
   padding: 1rem;
   margin-bottom: 1.7em;
+  transition: all 0.5s;
+  border: 1px solid #657ed4;
   transition: all 0.5s;
 }
 .mainIndex .sectionOferta .productoOferta div:hover {
@@ -226,9 +222,12 @@ body {
   margin-top: 0.5em;
   color: black;
   text-align: start;
+  border-top: 1px solid #657ed4;
 }
 .mainIndex .sectionInteresar {
   margin-bottom: 3em;
+  padding: 1rem;
+  color: white;
 }
 .mainIndex .sectionInteresar h2 {
   text-align: start;
@@ -247,131 +246,129 @@ body {
 }
 .mainIndex .sectionInteresar div p {
   margin-top: 0.5em;
+  border-top: 1px solid #657ed4;
   text-align: start;
+  color: #0d0106;
 }
 
 .mainProductos {
   display: grid;
-  grid-template-areas: "Titulo" "Subtitulo" "Productos";
+  grid-template-areas: "Titulo" "Productos" "Imagenes" "Comida" "Bebida" "Limpieza" "Regalería";
 }
-.mainProductos h1 {
+.mainProductos .nombreProductos {
   grid-area: Titulo;
-}
-.mainProductos h2 {
-  grid-area: Subtitulo;
 }
 .mainProductos section {
   grid-area: Productos;
 }
+.mainProductos .imgsections {
+  grid-area: Imagenes;
+}
+.mainProductos .comida {
+  grid-area: Comida;
+}
+.mainProductos .bebida {
+  grid-area: Bebida;
+}
+.mainProductos .limpieza {
+  grid-area: Limpieza;
+}
+.mainProductos .regaleria {
+  grid-area: Regalería;
+}
 
-.mainProductos h1 {
+.mainProductos {
+  text-align: start;
+}
+.mainProductos .nombreProductos {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../imágenes/fondo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainProductos .nombreProductos h1 {
   font-size: 3.5rem;
   color: white;
-  margin-bottom: 5rem;
+  margin: 3rem 1rem 0 1rem;
   font-weight: bold;
-  text-align: start;
 }
-.mainProductos h2 {
-  text-align: start;
-  font-family: "Bebas Neue", cursive;
-  color: #662C91;
-  position: relative;
-}
-.mainProductos h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #662C91;
-}
-.mainProductos .sectionproductos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.mainProductos .sectionproductos div {
-  width: 40vw;
-  background-color: white;
-  align-items: stretch;
-  padding: 1rem;
-  margin-bottom: 1.7em;
-  transition: all 0.5s;
-}
-.mainProductos .sectionproductos div:hover {
-  transform: scale(1.1);
-}
-.mainProductos .sectionproductos div img {
-  height: 25vh;
-  margin: auto;
-}
-.mainProductos .sectionproductos div p {
-  margin-top: 0.5em;
-  color: black;
-  text-align: start;
-}
-.mainProductos .sectionproductos div p::after {
-  display: none;
+.mainProductos .nombreProductos h2 {
+  margin: 1rem 1rem 3rem 1rem;
+  color: white;
 }
 .mainProductos section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  background-color: white;
 }
-.mainProductos section div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #662C91;
-  margin: 2em 0 0.5rem 0;
-  padding: 0.2rem;
-  position: relative;
+.mainProductos section h2 {
+  color: #657ed4;
+  margin: 1rem;
 }
-.mainProductos section div img {
-  width: 100%;
-  height: 50vh;
-  position: relative;
-  transition: transform 1s;
-  display: block;
+.mainProductos section p {
+  font-size: 1.5rem;
+  color: #657ed4;
+  margin: 0 1rem 4rem 1rem;
 }
-.mainProductos section div .parrafoshover {
-  position: absolute;
-  font-family: "Bebas Neue", cursive;
-  font-size: 3rem;
-  background-color: rgba(51, 49, 46, 0.7);
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.mainProductos .imgsections {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-}
-.mainProductos section div:hover .parrafoshover {
-  opacity: 1;
-}
-.mainProductos section .parrafosecciones {
-  color: #662C91;
-  border-top: none;
-  margin-bottom: 2.5rem;
-  text-align: start;
-  font-size: 1.3rem;
-  font-weight: 500;
   position: relative;
+  bottom: 55%;
 }
-.mainProductos section .parrafosecciones::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2.3rem;
-  left: 0;
-  background-color: #662C91;
+.mainProductos .imgsections img {
+  height: 6.5rem;
+  width: 6.5rem;
+}
+.mainProductos .comida, .mainProductos .bebida, .mainProductos .limpieza, .mainProductos .regaleria {
+  background-color: white;
+  text-align: center;
+}
+.mainProductos .comida h2, .mainProductos .bebida h2, .mainProductos .limpieza h2, .mainProductos .regaleria h2 {
+  color: #657ed4;
+  margin: 1rem;
+}
+.mainProductos .comidaProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #657ed4;
+  padding: 1rem;
+}
+@media (max-width: 455px) {
+  .mainProductos .comidaProductos {
+    flex-direction: column;
+  }
+}
+.mainProductos .comidaProductos p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.mainProductos .comidaProductos div {
+  width: auto;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1.7em;
+  transition: all 0.5s;
+  border: 1px solid #657ed4;
+  transition: all 0.5s;
+}
+.mainProductos .comidaProductos div:hover {
+  transform: scale(1.1);
+}
+.mainProductos .comidaProductos div img {
+  margin: auto;
+}
+.mainProductos .comidaProductos div p {
+  margin-top: 0.5em;
+  color: black;
+  text-align: start;
+  border-top: 1px solid #657ed4;
 }
 
 .mainMisCompras {
@@ -388,21 +385,46 @@ body {
 .mainMisCompras h1 {
   font-size: 3.5rem;
   color: white;
-  margin-bottom: 5rem;
+  margin: 1rem;
   font-weight: bold;
   text-align: start;
 }
-.mainMisCompras section {
+.mainMisCompras .miscomprasProductos {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #657ed4;
+  padding: 1rem;
 }
-.mainMisCompras section div {
-  margin: 2em 1em 2em 1em;
-  padding: 0.6rem;
+@media (max-width: 455px) {
+  .mainMisCompras .miscomprasProductos {
+    flex-direction: column;
+  }
 }
-.mainMisCompras section div img {
-  margin-bottom: 0.5rem;
+.mainMisCompras .miscomprasProductos p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.mainMisCompras .miscomprasProductos div {
+  width: auto;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1.7em;
+  transition: all 0.5s;
+  border: 1px solid #657ed4;
+  transition: all 0.5s;
+}
+.mainMisCompras .miscomprasProductos div:hover {
+  transform: scale(1.1);
+}
+.mainMisCompras .miscomprasProductos div img {
+  margin: auto;
+}
+.mainMisCompras .miscomprasProductos div p {
+  margin-top: 0.5em;
+  color: black;
+  text-align: start;
+  border-top: 1px solid #657ed4;
 }
 
 .mainHistorial {
@@ -419,112 +441,193 @@ body {
 .mainHistorial h1 {
   font-size: 3.5rem;
   color: white;
-  margin-bottom: 5rem;
+  margin: 1rem;
   font-weight: bold;
   text-align: start;
 }
-.mainHistorial section {
+.mainHistorial .historialProductos {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #657ed4;
+  padding: 1rem;
 }
-.mainHistorial section div {
-  margin: 2em 1em 2em 1em;
-  padding: 0.6rem;
+@media (max-width: 455px) {
+  .mainHistorial .historialProductos {
+    flex-direction: column;
+  }
+}
+.mainHistorial .historialProductos p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.mainHistorial .historialProductos div {
+  width: auto;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1.7em;
+  transition: all 0.5s;
+  border: 1px solid #657ed4;
+  transition: all 0.5s;
+}
+.mainHistorial .historialProductos div:hover {
+  transform: scale(1.1);
+}
+.mainHistorial .historialProductos div img {
+  margin: auto;
+}
+.mainHistorial .historialProductos div p {
+  margin-top: 0.5em;
+  color: black;
+  text-align: start;
+  border-top: 1px solid #657ed4;
 }
 
 .mainSobreNosotros {
   display: grid;
-  grid-template-areas: "Titulo" "Historia" "Aside";
+  grid-template-areas: "Titulo" "NuestraHistoria" "Historia";
   grid-template-columns: 1fr;
 }
-.mainSobreNosotros h1 {
+.mainSobreNosotros .nombreQuienesSomos {
   grid-area: Titulo;
 }
-.mainSobreNosotros div {
-  grid-area: Historia;
+.mainSobreNosotros h2 {
+  grid-area: NuestraHistoria;
 }
-.mainSobreNosotros aside {
-  grid-area: Aside;
-  display: none;
+.mainSobreNosotros .historia {
+  grid-area: Historia;
 }
 
 .mainSobreNosotros {
-  margin: 0.5em 0.5em 2em 0.5em;
-  text-align: start;
+  text-align: center;
 }
-.mainSobreNosotros h1 {
+.mainSobreNosotros .nombreQuienesSomos {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../imágenes/fondosobrenosotros.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainSobreNosotros .nombreQuienesSomos h1 {
   font-size: 3.5rem;
   color: white;
   margin-bottom: 5rem;
+  margin-top: 5rem;
   font-weight: bold;
 }
-.mainSobreNosotros p {
+.mainSobreNosotros .nombreQuienesSomos p {
+  display: none;
+}
+.mainSobreNosotros h2 {
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-family: "Bebas Neue", cursive;
+  color: #657ed4;
+  font-size: 3rem;
+  background-color: white;
+}
+.mainSobreNosotros .historia {
+  background-color: white;
+  padding: 2rem;
+}
+.mainSobreNosotros .historia p {
   border-top: none;
-  color: white;
+  color: #657ed4;
   font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+.mainSobreNosotros .historia div p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+}
+.mainSobreNosotros .historia div img {
+  height: 12rem;
+  width: 20rem;
 }
 
 .mainContactos {
   display: grid;
-  grid-template-areas: "Titulo" "Subtitulo" "Ubicacion" "Redes" "Formulario";
+  grid-template-areas: "Titulo" "Subtitulo";
 }
-.mainContactos h1 {
+.mainContactos .nombreContactos {
   grid-area: Titulo;
 }
-.mainContactos h2 {
+.mainContactos .redesubi {
   grid-area: Subtitulo;
-}
-.mainContactos .divUbicacion {
-  grid-area: Ubicacion;
-}
-.mainContactos .divRedes {
-  grid-area: Redes;
-}
-.mainContactos .form {
-  grid-area: Formulario;
 }
 
 .mainContactos {
-  margin: 0 1em 0 1em;
+  margin: 0;
   text-align: start;
   color: white;
 }
-.mainContactos h1 {
+.mainContactos .nombreContactos {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../imágenes/fondo2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainContactos .nombreContactos h1 {
   font-size: 3.5rem;
+  color: white;
   margin-bottom: 5rem;
+  margin-top: 5rem;
   font-weight: bold;
 }
-.mainContactos h2 {
+.mainContactos .redesubi {
+  padding: 2rem;
+  background-color: white;
+  color: #657ed4;
+}
+.mainContactos .redesubi h2 {
+  font-size: 3rem;
   margin-bottom: 1em;
   text-align: center;
 }
-.mainContactos p {
+.mainContactos .redesubi h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+.mainContactos .redesubi p {
   border-top: none;
 }
-.mainContactos .divUbicacion {
+.mainContactos .redesubi .divUbicacion {
   margin: 0.5em 0 2em 0;
 }
-.mainContactos .divRedes {
+.mainContactos .redesubi .divRedes {
   margin: 0.5em 0 2em 0;
 }
-.mainContactos .divRedes div {
+.mainContactos .redesubi .divRedes div {
   display: flex;
   justify-content: center;
 }
-.mainContactos .divRedes div a img {
+.mainContactos .redesubi .divRedes div a img {
   font-size: 0.7rem;
   margin: 1.5em;
   justify-content: space-around;
+  transition: all 0.5s;
 }
-.mainContactos .divRedes div a img:hover {
+.mainContactos .redesubi .divRedes div a img:hover {
   transform: scale(1.3);
 }
 .mainContactos .form section {
-  background-color: #33312E;
+  background-color: #657ed4;
+  border-radius: 1rem;
   margin: 1em 2em 2em 2em;
   padding: 2em;
-  color: #17A398;
+  color: white;
 }
 .mainContactos .form section article {
   text-align: start;
@@ -536,13 +639,13 @@ body {
 @media (min-width: 500px) {
   .mainIndex {
     display: grid;
-    grid-template-areas: "Titulo Titulo" "Slogan Slogan" "Ofertas Ofertas" "Interesar Interesar" "Novedades Novedades";
+    grid-template-areas: "Slogan Slogan" "Ofertas Ofertas" "Interesar Interesar" "Novedades Novedades";
   }
   .mainIndex .sectionOferta {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
-    background-color: #662C91;
+    background-color: white;
     padding: 2em;
   }
   .mainIndex .sectionOferta .productoOferta {
@@ -565,33 +668,27 @@ body {
 @media (min-width: 500px) {
   .mainProductos {
     display: grid;
-    grid-template-areas: "Titulo Titulo" "Subtitulo Subtitulo" "Productos Productos";
+    grid-template-areas: "Titulo Titulo" "Productos Productos" "Imagenes Imagenes" "Comida Comida" "Bebida Bebida" "Limpieza Limpieza" "Regalería Regalería";
   }
 }
-@media (min-width: 500px) and (min-width: 800px) {
-  .mainProductos section {
-    flex-direction: row;
-    flex-wrap: wrap;
+@media (min-width: 500px) {
+  .mainProductos .imgsections {
     justify-content: space-around;
   }
-  .mainProductos section a {
-    width: auto;
-    height: auto;
-  }
-  .mainProductos section a div {
-    width: 20rem;
-  }
-  .mainProductos section a div img {
-    height: 50vh;
-  }
-  .mainProductos section a p::after {
-    display: none;
+  .mainProductos .imgsections img {
+    height: 8rem;
+    width: 8rem;
   }
 }
 @media (min-width: 500px) {
   .mainMisCompras {
     display: grid;
     grid-template-areas: "Titulo Titulo" "MisCompras MisCompras";
+  }
+}
+@media (min-width: 500px) {
+  .mainMisCompras .miscomprasProductos {
+    justify-content: space-around;
   }
 }
 @media (min-width: 500px) {
@@ -603,12 +700,34 @@ body {
 @media (min-width: 500px) {
   .mainSobreNosotros {
     display: grid;
-    grid-template-areas: "Titulo Titulo" "Historia Historia";
+    grid-template-areas: "Titulo Titulo" "NuestraHistoria NuestraHistoria" "Historia Historia";
     grid-template-columns: 2fr 2fr;
   }
-  .mainSobreNosotros aside {
-    grid-area: Aside;
-    display: block;
+}
+@media (min-width: 500px) {
+  .mainSobreNosotros .nombreQuienesSomos {
+    background-image: url(../imágenes/fondo3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .mainSobreNosotros .historia div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .mainSobreNosotros .historia div img {
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 500px) and (min-width: 781px) {
+  .mainSobreNosotros .historia div img {
+    margin-right: 5rem;
+  }
+}
+@media (min-width: 500px) {
+  .mainSobreNosotros .historia div p {
+    align-self: center;
   }
 }
 @media (min-width: 500px) {
@@ -618,14 +737,17 @@ body {
   }
 }
 @media (min-width: 500px) {
-  .mainContactos .divUbicacion {
+  .mainContactos .nombreContactos {
+    background-image: url(../imágenes/fondo5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .mainContactos .redesubi .divRedes h3 {
     text-align: start;
   }
-  .mainContactos .divRedes h3 {
-    text-align: start;
-  }
-  .mainContactos .divRedes div a img {
-    transition: all 0.5s;
+  .mainContactos .redesubi .divRedes div {
+    justify-content: start;
   }
   .mainContactos .form h3 {
     text-align: start;
@@ -644,7 +766,11 @@ body {
   }
   .mainIndex {
     display: grid;
-    grid-template-areas: "Titulo Titulo Titulo Titulo" "Slogan Slogan Slogan Slogan" "Ofertas Ofertas Ofertas Ofertas" "Interesar Interesar Interesar Interesar" "Novedades Novedades Novedades Novedades";
+    grid-template-areas: "Slogan Slogan Slogan Slogan" "Ofertas Ofertas Ofertas Ofertas" "Interesar Interesar Interesar Interesar" "Novedades Novedades Novedades Novedades";
+  }
+  .mainIndex .nombre {
+    height: 100vh;
+    width: 98.9vw;
   }
   .mainIndex .sectionOferta h2 {
     text-align: start;
@@ -660,10 +786,26 @@ body {
   }
   .mainProductos {
     display: grid;
-    grid-template-areas: "Titulo Titulo Titulo Titulo" "Subtitulo Subtitulo Subtitulo Subtitulo" "Productos Productos Productos Productos";
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "Productos Productos Productos Productos" "Imagenes Imagenes Imagenes Imagenes" "Comida Comida Comida Comida" "Bebida Bebida Bebida Bebida" "Limpieza Limpieza Limpieza Limpieza" "Regalería Regalería Regalería Regalería";
   }
-  .mainProductos .sectionproductos div {
-    width: 20vw;
+  .mainProductos .nombreProductos {
+    height: 100vh;
+    width: 98.9vw;
+  }
+  .mainProductos .nombreProductos h1, .mainProductos .nombreProductos h2 {
+    margin-left: 4rem;
+  }
+  .mainProductos .imgsections img {
+    height: 10.5rem;
+    width: 10.5rem;
+  }
+  .mainProductos section h2 {
+    margin-top: 3rem;
+    margin-left: 4rem;
+  }
+  .mainProductos section p {
+    margin-left: 4rem;
+    margin-bottom: 8rem;
   }
   .mainMisCompras {
     display: grid;
@@ -675,16 +817,66 @@ body {
   }
   .mainSobreNosotros {
     display: grid;
-    grid-template-areas: "Aside Titulo Titulo Titulo" "Aside Historia Historia Historia";
-    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-areas: "Titulo Titulo Titulo Titulo" "NuestraHistoria NuestraHistoria NuestraHistoria NuestraHistoria" "Historia Historia Historia Historia";
+    grid-template-columns: 2fr 2fr 2fr 2fr;
   }
   .mainSobreNosotros aside {
     grid-area: Aside;
     display: block;
   }
+  .mainSobreNosotros .nombreQuienesSomos {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    width: 98.9vw;
+    background-image: url(../imágenes/fondo4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .mainSobreNosotros .nombreQuienesSomos h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin: 5rem 0 2rem 3.5rem;
+    font-weight: bold;
+  }
+  .mainSobreNosotros .nombreQuienesSomos p {
+    display: block;
+    text-align: start;
+    margin: 0 40rem 0 3.5rem;
+    font-size: 1.5rem;
+    color: white;
+  }
+  .mainSobreNosotros .historia .displayP {
+    display: none;
+  }
+  .mainSobreNosotros .historia div div {
+    margin-right: 6rem;
+  }
   .mainContactos {
     display: grid;
     grid-template-areas: "Titulo Titulo Titulo Titulo" "Subtitulo Subtitulo Subtitulo Subtitulo" "Ubicacion Ubicacion Ubicacion Ubicacion" "Redes Redes Redes Redes" "Formulario Formulario Formulario Formulario";
+  }
+  .mainContactos .nombreContactos {
+    align-items: flex-start;
+    height: 100vh;
+    width: 98.9vw;
+    background-image: url(../imágenes/fondo6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .mainContactos .nombreContactos h1 {
+    margin: 5rem 0 2rem 3.5rem;
+    font-size: 3.5rem;
+  }
+  .mainContactos .nombreContactos p {
+    text-align: start;
+    margin: 0 45rem 0 3.5rem;
+    font-size: 1.5rem;
+    color: white;
   }
   .mainContactos h1 {
     text-align: start;

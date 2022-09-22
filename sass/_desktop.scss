@@ -14,7 +14,6 @@
     .mainIndex{
         display: grid;
         grid-template-areas: 
-        "Titulo Titulo Titulo Titulo"
         "Slogan Slogan Slogan Slogan"
         "Ofertas Ofertas Ofertas Ofertas"
         "Interesar Interesar Interesar Interesar"
@@ -25,6 +24,11 @@
     // ESTILOS
 
     .mainIndex{
+
+        .nombre{
+            height: 100vh;
+            width: 98.9vw;
+        }
 
         .sectionOferta{
            
@@ -54,17 +58,46 @@
     .mainProductos{
         display: grid;
         grid-template-areas: 
-            "Titulo Titulo Titulo Titulo"
-            "Subtitulo Subtitulo Subtitulo Subtitulo"
-            "Productos Productos Productos Productos";
+        "Titulo Titulo Titulo Titulo"
+        "Productos Productos Productos Productos"
+        "Imagenes Imagenes Imagenes Imagenes"
+        "Comida Comida Comida Comida"
+        "Bebida Bebida Bebida Bebida"
+        "Limpieza Limpieza Limpieza Limpieza"
+        "Regalería Regalería Regalería Regalería";
     }
 
     // ESTILOS
 
     .mainProductos{
-        .sectionproductos{
-            div{
-                width: 20vw;
+        
+        .nombreProductos{
+
+            height: 100vh;
+            width: 98.9vw;
+
+            h1,h2{
+                margin-left: 4rem;
+            }
+        }
+
+        .imgsections{
+            img{
+                height: 10.5rem;
+                width: 10.5rem;
+            }
+        }
+
+        section{
+            
+            h2{
+                margin-top: 3rem;
+                margin-left: 4rem;
+            }
+
+            p{
+                margin-left: 4rem;
+                margin-bottom: 8rem;
             }
         }
     }
@@ -139,14 +172,57 @@
 
         display: grid;
         grid-template-areas: 
-        "Aside Titulo Titulo Titulo"
-        "Aside Historia Historia Historia";
-        grid-template-columns: 1fr 2fr 2fr 2fr;
+        "Titulo Titulo Titulo Titulo"
+        "NuestraHistoria NuestraHistoria NuestraHistoria NuestraHistoria"
+        "Historia Historia Historia Historia";
+        grid-template-columns: 2fr 2fr 2fr 2fr;
     }
 
-    // ESTILOS (COLOCAR PRODUCTOS Y ESTILOS)
+    // ESTILOS 
 
 
+    .mainSobreNosotros{
+        .nombreQuienesSomos{
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column;
+    
+            height: 100vh;
+            width: 98.9vw;
+            background-image: url(../imágenes/fondo4.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    
+            h1{
+                font-size: 3.5rem;
+                color: $colorblanco;
+                margin: 5rem 0 2rem 3.5rem;
+                font-weight: bold;
+            }
+    
+            p{
+                display: block;
+                text-align: start;
+                margin: 0 40rem 0 3.5rem;
+                font-size: 1.5rem;
+                color: $colorblanco;
+            }
+        }
+
+        .historia{
+            .displayP{
+                display: none;
+            }
+
+            div{
+                div{
+                    margin-right: 6rem;
+                }
+            }
+        }
+    }
 
 
 
@@ -174,6 +250,28 @@
     // ESTILOS
 
     .mainContactos{
+
+        .nombreContactos{
+            align-items: flex-start;
+            height: 100vh;
+            width: 98.9vw;
+            background-image: url(../imágenes/fondo6.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            h1{
+                margin:5rem 0 2rem 3.5rem;
+                font-size: 3.5rem;
+            }
+
+            p{
+                text-align: start;
+                margin: 0 45rem 0 3.5rem;
+                font-size: 1.5rem;
+                color: $colorblanco;
+            }
+        }
 
         h1{
             text-align: start;

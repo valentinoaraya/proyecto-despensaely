@@ -3,9 +3,6 @@
     padding: 0;
 }
 
-main{
-    margin: 1rem;
-}
 
 body{
     text-align: center;
@@ -24,10 +21,6 @@ a{
     text-decoration: none;
 }
 
-p{
-    border-top: 1px solid $colorvioleta;
-}
-
 .bg-color-naranjita{
     background-color: $colorblanco;
 }
@@ -36,16 +29,18 @@ p{
 // NAVBAR - GENERAL
 
 header{
-    margin-bottom: 2rem;
 
     nav{
-        .navbarfont{
-            font-size: 1.8rem;
-            font-weight: bold;
-            font-family: 'Oswald', sans-serif;
-            color: $colorsalmon
-        }
 
+        div{
+            a{
+                img{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+        
         .navhover{
             transition: all 0.5s;
             &:hover{
@@ -59,7 +54,7 @@ header{
 // FOOTER - GENERAL
 
 footer{
-    background-color: $colornonegro;
+    background-color: $colorblanco;
     padding-top: 0.5em;
     margin-top: 0.5em;
 
@@ -67,14 +62,26 @@ footer{
         text-align: start;
         font-family: 'Bebas Neue', cursive;
         padding: 1.8em;
-        background-color: $colornonegro;
+        background-color: $colorblanco;
         display: flex;
         flex-direction: column;
-        color: $colorverdeagua;
+        color: $colorsalmon;
+
+        div{
+            img{
+                height: 6rem;
+                width: 6rem;
+
+                transition: all 0.5s;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
 
         h2{
             font-size: 2rem;
-            font-weight: bold;
             margin-bottom: 1rem;
         }
 
@@ -87,7 +94,6 @@ footer{
         }
 
         h3{
-
             margin: 1em 0 1em 0;
             font-size: 1.5rem;
         }
@@ -106,32 +112,13 @@ footer{
 
         a{
             text-decoration: none;
+
             
             p{
                 margin: 0 0 0 1rem;
                 font-size: 1rem;
                 font-weight: bolder;
-                color: $colorverdeagua;
-                display: inline-block;
-                position: relative;
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $colorverdeagua;
-                    transform: scaleX(0);
-                    transform-origin: bottom right;
-                    transition: transform 0.4s ease-out;
-                }
-
-                &:hover::after{
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                }
+                color: $colorsalmon;
             }
         }
     }
@@ -171,9 +158,6 @@ body{
 
 @media (min-width: 500px){
 
-    header{
-        margin-bottom: 1rem;
-    }
 
     body{
         display: grid;
